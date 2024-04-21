@@ -11,6 +11,14 @@
     };
     spinner(0);
     
+
+    /*=====================================
+			Counter Up JS
+		======================================*/
+		$('.counter').counterUp({
+			delay:20,
+			time:2000
+		});
     
     // Initiate the wowjs
     new WOW().init();
