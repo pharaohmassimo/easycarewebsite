@@ -97,6 +97,113 @@ body{
     color: var(--bs-secondary) !important;
 }
 
+
+
+/***********
+FUN FACTS
+*********/
+
+/*=======================
+	Start Fun Facts CSS
+=========================*/
+.fun-facts{
+	position:relative;
+}
+.fun-facts.section{
+	padding:120px 0;
+}
+.fun-facts{
+	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/carousel-2.png);
+	background-size:cover;
+	background-repeat:no-repeat;
+}
+.fun-facts .single-fun {
+	
+}
+.fun-facts .single-fun i {
+	position: absolute;
+	left: 0;
+	font-size: 62px;
+	color: #fff;
+	height: 70px;
+	width: 70px;
+	line-height: 67px;
+	font-size: 28px;
+	text-align: center;
+	padding: 0;
+	margin: 0;
+	border: 2px solid #fff;
+	border-radius: 0px;
+	top: 50%;
+	margin-top: -35px;
+	-webkit-transition: all 0.4s ease;
+	-moz-transition: all 0.4s ease;
+	transition: all 0.4s ease;
+	border-radius: 50%;
+}
+.fun-facts .single-fun:hover i{
+	color:#91c53f;
+	background:#fff;
+	border-color:transparent;
+}
+.fun-facts .single-fun .content {
+	padding-left: 80px;
+}
+.fun-facts .single-fun span {
+	color: #fff;
+	font-weight: 600;
+	font-size: 30px;
+	position: relative;
+	display: block;
+	-webkit-transition: all 0.4s ease;
+	-moz-transition: all 0.4s ease;
+	transition: all 0.4s eas;
+	display: block;
+	margin-bottom: 7px;
+}
+.fun-facts .single-fun p{
+	color:#fff;
+	font-size:15px;
+}
+
+
+.fun-facts.section{
+	padding:70px 0;
+}
+.fun-facts .single-fun{
+	margin:0;
+	margin:15px 0;
+	position:relative;
+}
+.fun-facts .single-fun {
+	margin: 35px 0;
+	padding-top: 60px;
+	text-align: center;
+}
+.fun-facts .single-fun i {
+	left: 50%;
+	margin-left: -35px;
+	top:0;
+	position:absolute;
+}
+.fun-facts .single-fun .content {
+	padding:0;
+}
+
+.fun-facts.section{
+	padding:70px 0;
+}
+.fun-facts .single-fun {
+	margin: 20px 0;
+}
+/*===================
+	End Fun Facts
+=====================*/
+
+
+
+
+
 /*** Section Title Start ***/
 .section-title {
     max-width: 900px;
