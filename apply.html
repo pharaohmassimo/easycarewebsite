@@ -28,6 +28,29 @@
         <link href="lib/animate/animate.min.css" rel="stylesheet">
         <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
 
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Nice Select CSS -->
+    <link rel="stylesheet" href="css/nice-select.css">
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <!-- icofont CSS -->
+    <link rel="stylesheet" href="css/icofont.css">
+    <!-- Slicknav -->
+    <link rel="stylesheet" href="css/slicknav.min.css">
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet" href="css/owl-carousel.css">
+    <!-- Datepicker CSS -->
+    <link rel="stylesheet" href="css/datepicker.css">
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="css/animate.min.css">
+    <!-- Magnific Popup CSS -->
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <!-- Medipro CSS -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/responsive.css">
 
         <!-- Customized Bootstrap Stylesheet -->
         <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -116,102 +139,860 @@
         <!-- Header End -->
 
 
-        <!-- Contact Start -->
-        <div class="container-fluid contact py-5">
-            <div class="container py-5">
-                <div class="section-title mb-5 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="sub-style mb-4">
-                        <h4 class="sub-title text-white px-3 mb-0">Contact Us</h4>
-                    </div>
-                    <p class="mb-0 text-black-50">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat deleniti amet at atque sequi quibusdam cumque itaque repudiandae temporibus, eius nam mollitia voluptas maxime veniam necessitatibus saepe in ab? Repellat!</p>
-                </div>
-                <div class="row g-4 align-items-center">
-                    <div class="col-lg-5 col-xl-5 contact-form wow fadeInLeft" data-wow-delay="0.1s">
-                        <h2 class="display-5 text-white mb-2">Get in Touch</h2>
-                        <p class="mb-4 text-white">The contact form is currently inactive. Get a functional and working contact form with Ajax & PHP in a few minutes. Just copy and paste the files, add a little code and you're done. <a class="text-dark fw-bold" href="https://htmlcodex.com/contact-form">Download Now</a>.</p>
-                        <form>
-                            <div class="row g-3">
-                                <div class="col-lg-12 col-xl-6">
-                                    <div class="form-floating">
-                                        <input type="text" class="form-control bg-transparent border border-white" id="name" placeholder="Your Name">
-                                        <label for="name">Your Name</label>
+
+    <!-- Start Contact Us -->
+    <section class="contact-us section">
+        <div class="container">
+            <div class="inner">
+                <div class="row">
+                  
+                    <div class="col-lg-13">
+                        <div class="contact-us-form">
+                            <h2></h2>
+                            <p>EASYCARE Suppliers UK Limited request you fill out this form honestly and accurately, as it is then used in the
+                            recruitment process to assess your suitability for temporary assignments.
+                            <br><br>
+                            
+                            Along with the completed Application Pack, we will need to sight the originals of the following documents: <br>
+                        <br>  • Passport and Visa (if app)
+                            <br> • Drivers Licence (if app)
+                        <br>  • Proof of Address x2
+                        <br>  • Proof of National Insurance
+                        <br>  • CRB/DBS Disclosure Certificate
+                        <br>  • Mandatory Training Certificates (Skills for Health Aligned)
+                        <br>  • Qualification Certificates (NVQ in Health & Social care/ NMC Statement of Entry/ HCPC Certificate and Card/ GMC
+                        <br>  Certificate)
+                            <br> • Immunisations – (Hep B, Rubella, Measles, Varicella, BCG Scar and TB (HIV, HEP B Antigen and HEP C if EPP)</p>
+                            <!-- Form -->
+
+                            <div class="button">
+									<a href="/docs/48-Hour-Waiver-3.docx" class="btn">48 Hour Waiver</a>
+									<a href="/docs/Agency-Worker-Handbook-Declaration.docx" class="btn primary">Agency Worker Handbook Declaration</a>
+                                    	<a href="/docs/Confidentiality-Agreement-1.docx" class="btn">Confidentiality Agreement</a>
+									<a href="/docs/Declaration-–-Healthcare.docx" class="btn primary">Healthcare Declaration</a>
+								</div>
+                            <form class="form" method="post" action="mail/mail.php">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <input type="text" name="name" placeholder="Full Name" required="">
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <input type="text" name="position" placeholder="Position Applied For" required="">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label for="date">Date Completed:</label>
+                                            <input type="date" name="date" placeholder="Date Completed" required="">
+                                        </div>
+                                    </div>
+                                 
+                                </div>
+
+                                <header style="background-color: #91c53f; ">
+                                    <h6 style = "color: white; padding: 10px;">Source</h6>
+                                </header>
+                                <br>
+
+                                <div class="col-12">
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <input type="text" name="reference" placeholder="How did you hear about EasyCare Suppliers UK Limited?" required="">
+                                        </div>
+                                    </div>
+                                
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <input type="text" name="referenceName" placeholder="If you were referred by a friend or colleague, please provide us with their name:" required="">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12">
+                                        Availability? <br><br>
+                                    
+                                        <input type="radio" name="option" id="option1" value="option1">
+                                        <label for="option1">Full Time</label> 
+                                    
+                                        <input type="radio" name="option" id="option2" value="option2">
+                                        <label for="option2">Part Time</label>
+
+                                        <input type="radio" name="option" id="option2" value="option2">
+                                        <label for="option2">Weekends</label>
+                                        <br><br>
+                                    
+                                       
+                                    </div>
+
+                                  
+                                </div>
+
+                                <header style="background-color: #91c53f; ">
+                                    <h6 style="color: white; padding: 10px;">Personal Details</h6>
+                                </header>
+                                <br>
+
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <input type="text" name="title" placeholder="Title" required="">
+                                        </div>
+                                    </div>
+                                
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <input type="text" name="Surname" placeholder="Surname" required="">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <input type="text" name="fname" placeholder="ForeName" required="">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <input type="text" name="phone" placeholder="Mobile Number" required="">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12">
+                                        Have you ever been known by any other name? <br><br>
+                                    
+                                        <input type="radio" name="option" id="option1" value="option1">
+                                        <label for="option1">Yes</label>
+                                    
+                                        <input type="radio" name="option" id="option2" value="option2">
+                                        <label for="option2">No</label>
+                                        <br><br>
+                                    
+                                        <div class="col-lg-6">
+                                            <div class="form-group">
+                                                <input type="text" name="otherName" placeholder="If yes, please specify the full name and dates used:"
+                                                    required="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <input type="text" name="homePhone" placeholder="Home Phone" required="">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <input type="text" name="workPhone" placeholder="Work Phone" required="">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <input type="email" name="email" placeholder="Email Address*" required="">
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <input type="text" name="insuranceNumber" placeholder="National Insurance Number" required="">
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label for="date">Date Of Birth:</label>
+                                            <input type="date" name="dob" placeholder="Date of Birth*" required="">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-10">
+                                  
+                                        <div class="form-group">
+                                            <textarea name="address" placeholder=" Current Address" required=""></textarea>
+                                        </div>
+                                    
+                                    </div>
+
+                                    </div>
+                                
+                                </div>
+
+                                Do you hold a valid UK Drivers Licence? <br><br>
+
+                                <input type="radio" name="option" id="option1" value="option1">
+                                <label for="option1">Yes</label>
+                                
+                                <input type="radio" name="option" id="option2" value="option2">
+                                <label for="option2">No</label>
+
+                                <br><br>
+
+
+                                <header style="background-color: #91c53f; ">
+                                    <h6 style="color: white; padding: 10px;">Next of Kin Details</h6>
+                                </header>
+                                <br>
+
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <div class="form-group">
+                                                <input type="text" name="kinname" placeholder="Full Name" required="">
+                                            </div>
+                                        </div>
+                                    
+                                        <div class="col-lg-6">
+                                            <div class="form-group">
+                                                <input type="text" name="kinContact" placeholder="Contact Number" required="">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="form-group">
+                                                <input type="text" name="kinRelationship" placeholder="Relationship to you" required="">
+                                            </div>
+                                        </div>
+                                    
+                                    </div>
+
+
+                                <header style="background-color: #91c53f; ">
+                                    <h6 style="color: white; padding: 10px;">Right to Work</h6>
+                                </header>
+                                <br>
+                                <div class="col-12">
+                                    <div class="col-lg-">
+                                        <div class="form-group">
+                                            <input type="text" name="restrictions" placeholder="Are there any restrictions to your residence in the UK that might affect your right to take up employment in the UK?" required="">
+                                        </div>
+                                    </div>
+                                
+                                    <div class="col-lg-">
+                                        <div class="form-group">
+                                            <input type="text" name="permission"
+                                                placeholder="Are there any restrictions to your residence in the UK that might affect your right to take up employment in the UK?"
+                                                required="">
+                                        </div>
+                                    </div>
+                                
+                                
+                                </div>
+
+
+                                <header style="background-color: #91c53f; ">
+                                    <h6 style="color: white; padding: 10px;">Training and Qualifications</h6>
+                                </header>
+                                <br>
+
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <input type="text" name="regNo=umber" placeholder="HCPC/NMC/GMC Registration Number" required="">
                                     </div>
                                 </div>
-                                <div class="col-lg-12 col-xl-6">
-                                    <div class="form-floating">
-                                        <input type="email" class="form-control bg-transparent border border-white" id="email" placeholder="Your Email">
-                                        <label for="email">Your Email</label>
+                                
+                               
+                                <div class="col-12">
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label for="date">Date Of Expiry:</label>
+                                            <input type="date" name="dob" placeholder="Date of Birth*" required="">
+                                        </div>
+                                    </div>
+
+                                  
+                                        <div class="col-lg-6">
+                                            <div class="form-group">
+                                                <label for="date">Next Revalidation Date:</label>
+                                                <input type="date" name="dob" placeholder="Date of Birth*" required="">
+                                            </div>
+                                        </div>
+
+
+                                        Medical Indemnity Insurance – Nurse/Midwife Only
+
+                                        <br><br>
+
+                                        <div class="row">
+                                            <div class="col-lg-6">
+                                                <div class="form-group">
+                                                    <input type="text" name="insure" placeholder="Name of Insurer" required="">
+                                                </div>
+                                            </div>
+                                        
+                                            <div class="col-lg-6">
+                                                <div class="form-group">
+                                                    <input type="text" name="policy" placeholder="Policy Number" required="">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-6">
+                                                <div class="form-group">
+                                                    <label for="date">Expiry Date (If Applicable):</label>
+                                                    <input type="date" name="policyExpiry" placeholder="Date of Birth*" required="">
+                                                </div>
+                                            </div>
+
+                                         
+                                        
+                                        
+                                        </div>
+                                        <div class="col-lg-">
+                                            <div class="form-group">
+                                                <input type="text" name="study" placeholder="Where did you study and qualify?" required="">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="form-group">
+                                                <label for="date">What year did you qualify?:</label>
+                                                <input type="date" name="yearStudy" placeholder="Date of Birth*" required="">
+                                            </div>
+                                        </div>
+
+
+
+                                <header style="background-color: #91c53f; ">
+                                    <h6 style="color: white; padding: 10px;">Previous Employment- Full Work History</h6>
+                                </header>
+                                <br>
+                                
+
+
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <input type="text" name="previousEmployer" placeholder="Present/last employer" required="">
+                                        </div>
+                                    </div>
+                                
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <input type="text" name="addressEmployer" placeholder="Address" required="">
+                                        </div>
+                                    </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <input type="text" name="title" placeholder="Job Title" required="">
                                     </div>
                                 </div>
-                                <div class="col-lg-12 col-xl-6">
-                                    <div class="form-floating">
-                                        <input type="phone" class="form-control bg-transparent border border-white" id="phone" placeholder="Phone">
-                                        <label for="phone">Your Phone</label>
+
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <input type="text" name="duties" placeholder="Duties/ Responsibilities" required="">
                                     </div>
                                 </div>
-                                <div class="col-lg-12 col-xl-6">
-                                    <div class="form-floating">
-                                        <input type="text" class="form-control bg-transparent border border-white" id="project" placeholder="Project">
-                                        <label for="project">Your Project</label>
+
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <input type="text" name="reasonsLeaving" placeholder="Reasons for Leaving" required="">
                                     </div>
+                                </div>
+                                 
+                                </div>
+
+
+                                <header style="background-color: #91c53f; ">
+                                    <h6 style="color: white; padding: 10px;">Preferences</h6>
+                                </header>
+                                <br>
+
+
+                                Please provide us with your referee details. Your referees must be either a Manager or Supervisor and be of a clinical
+                                state. <br><br>
+
+
+
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <input type="text" name="refCompany" placeholder="Company Name" required="">
+                                        </div>
+                                    </div>
+                                
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <input type="text" name="refDetails" placeholder="Contact Name and Position of Referee" required="">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <input type="text" name="refAddress" placeholder="Address" required="">
+                                        </div>
+                                    </div>
+                                
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <input type="text" name="refPhone" placeholder="Phone" required="">
+                                        </div>
+                                    </div>
+                                
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <input type="email" name="refEmail" placeholder="Email" required="">
+                                        </div>
+                                    </div>
+                                
+                                
+                                
+                                
+                                
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label for="date">Dates of Employment:</label>
+                                        <input type="date" name="refDateEMployment" placeholder="Date of Birth*" required="">
+                                    </div>
+                                </div>
+
+
+                                <header style="background-color: #91c53f; ">
+                                    <h6 style="color: white; padding: 10px;">Health and Disability</h6>
+                                </header>
+                                <br>
+<div class="col-12">
+    The following questions on health and disability are asked in order to find out your needs in terms of reasonable
+    adjustments to access our recruitment service and to find out your needs in order to perform the job/position sought.
+    <br><br>
+    Do you have any health issues or a disability which may make it difficult for you to carry out functions which are
+    essential for the role you seek? <br><br>
+
+    <input type="radio" name="option" id="option1" value="option1">
+    <label for="option1">Yes</label>
+
+    <input type="radio" name="option" id="option2" value="option2">
+    <label for="option2">No</label>
+    <br><br>
+
+
+</div>
+
+<div class="col-12">
+    <div class="col-lg-">
+        <div class="form-group">
+            <input type="text" name="reference" placeholder="If yes, please provide us with details"
+                required="">
+        </div>
+    </div>
+
+    <div class="col-lg-">
+        <div class="form-group">
+            <input type="text" name="referenceName"
+                placeholder="If you have a disability, what are your needs in terms of adjustments? Please provide us with details"
+                required="">
+        </div>
+    </div>
+
+
+</div>
+
+
+
+                                <header style="background-color: #91c53f; ">
+                                    <h6 style="color: white; padding: 10px;">Health Assessment Questionnaire</h6>
+                                </header>
+                                <br>
+                                <div class="row">
+                                 <div class="col-8">
+                                    Have you had any medical problem in the past that has prevented you from working at night?
+                                 </div>
+                                 <div class="col-3">
+                                    <input type="radio" name="option" id="option1" value="option1">
+                                    <label for="option1">Yes</label>
+                                
+                                    <input type="radio" name="option" id="option2" value="option2">
+                                    <label for="option2">No</label>
+                                    <br><br>
+                                
+                                
+                                 </div>
+                                </div>
+
+                                 <div class="row">
+                                 <div class="col-8">
+                                    Are you diabetic?
+                                 </div>
+                                 <div class="col-3">
+                                    <input type="radio" name="option" id="option1" value="option1">
+                                    <label for="option1">Yes</label>
+                                
+                                    <input type="radio" name="option" id="option2" value="option2">
+                                    <label for="option2">No</label>
+                                    <br><br>
+                                
+                                
+                                 </div>
+                                </div>
+                                 <div class="row">
+                                 <div class="col-8">
+                          Do you have angina, or other heart problems that may affect your fitness?
+                                 </div>
+                                 <div class="col-3">
+                                    <input type="radio" name="option" id="option1" value="option1">
+                                    <label for="option1">Yes</label>
+                                
+                                    <input type="radio" name="option" id="option2" value="option2">
+                                    <label for="option2">No</label>
+                                    <br><br>
+                                
+                                
+                                 </div>
+                                </div>
+                                 <div class="row">
+                                 <div class="col-8">
+                                  Have you had duodenal or stomach ulcers in the past, or are you under treatment for those at present?
+                                 </div>
+                                 <div class="col-3">
+                                    <input type="radio" name="option" id="option1" value="option1">
+                                    <label for="option1">Yes</label>
+                                
+                                    <input type="radio" name="option" id="option2" value="option2">
+                                    <label for="option2">No</label>
+                                    <br><br>
+                                
+                                
+                                 </div>
+                                </div>
+                                 <div class="row">
+                                 <div class="col-8">
+                       Have you had any continuing bowel problem, for instance following major surgery?
+                                 </div>
+                                 <div class="col-3">
+                                    <input type="radio" name="option" id="option1" value="option1">
+                                    <label for="option1">Yes</label>
+                                
+                                    <input type="radio" name="option" id="option2" value="option2">
+                                    <label for="option2">No</label>
+                                    <br><br>
+                                
+                                
+                                 </div>
+                                </div>
+                                 <div class="row">
+                                 <div class="col-8">
+                                  Do you have any chronic chest problem such as asthma, emphysema or bronchiectasis?
+                                 </div>
+                                 <div class="col-3">
+                                    <input type="radio" name="option" id="option1" value="option1">
+                                    <label for="option1">Yes</label>
+                                
+                                    <input type="radio" name="option" id="option2" value="option2">
+                                    <label for="option2">No</label>
+                                    <br><br>
+                                
+                                
+                                 </div>
+                                </div>
+                                 <div class="row">
+                                 <div class="col-8">
+                                   Do you have any disability affecting mobility that will cause difficulties in arranging night work?
+                                 </div>
+                                 <div class="col-3">
+                                    <input type="radio" name="option" id="option1" value="option1">
+                                    <label for="option1">Yes</label>
+                                
+                                    <input type="radio" name="option" id="option2" value="option2">
+                                    <label for="option2">No</label>
+                                    <br><br>
+                                
+                                
+                                 </div>
+                                </div>
+                                 <div class="row">
+                                 <div class="col-8">
+                                    Do you have any recurrent or continuing sleep disturbance requiring medical advice?
+                                 </div>
+                                 <div class="col-3">
+                                    <input type="radio" name="option" id="option1" value="option1">
+                                    <label for="option1">Yes</label>
+                                
+                                    <input type="radio" name="option" id="option2" value="option2">
+                                    <label for="option2">No</label>
+                                    <br><br>
+                                
+                                
+                                 </div>
+                                </div>
+                                 <div class="row">
+                                 <div class="col-8">
+                                  Are you having specialist care requiring your attendance at hospital clinics for treatment?
+                                 </div>
+                                 <div class="col-3">
+                                    <input type="radio" name="option" id="option1" value="option1">
+                                    <label for="option1">Yes</label>
+                                
+                                    <input type="radio" name="option" id="option2" value="option2">
+                                    <label for="option2">No</label>
+                                    <br><br>
+                                
+                                
+                                 </div>
+                                </div>
+                                 <div class="row">
+                                 <div class="col-8">
+                                   Do you have any other health problem that affects your fitness for night work?
+                                 </div>
+                                 <div class="col-3">
+                                    <input type="radio" name="option" id="option1" value="option1">
+                                    <label for="option1">Yes</label>
+                                
+                                    <input type="radio" name="option" id="option2" value="option2">
+                                    <label for="option2">No</label>
+                                    <br><br>
+                                
+                                
+                                 </div>
+                                </div>
+                                 <div class="row">
+                                 <div class="col-8">
+                                   Are you taking any medication to a strict timetable?
+                                 </div>
+                                 <div class="col-3">
+                                    <input type="radio" name="option" id="option1" value="option1">
+                                    <label for="option1">Yes</label>
+                                
+                                    <input type="radio" name="option" id="option2" value="option2">
+                                    <label for="option2">No</label>
+                                    <br><br>
+                                
+                                
+                                 </div>
+                                </div>
+
+
+                               
+
+                                
+    <div class="col-lg-">
+        <div class="form-group">
+            <input type="text" name="prescribedMedications"
+                placeholder="Please give the names of any prescribed medications that you take regularly"
+                required="">
+        </div>
+    </div>
+
+    
+    <div class="col-lg-">
+        <div class="form-group">
+            <input type="text" name="attentionDetail"
+                placeholder="Please give any further details that you would like to bring to our attention."
+                required="">
+        </div>
+    </div>
+
+
+
+
+
+                                    <header style="background-color: #91c53f; ">
+                                        <h6 style="color: white; padding: 10px;">Data Protection Act 1984 & 1998</h6>
+                                    </header>
+                                    <br>
+
+
+                                    <div class="col-12">
+                                    The Data Protection Act 1998 requires that any staff handling personal data must follow certain principles in relation
+                                    to the data that they hold. Individuals have rights of access to data that is held and rights to claim for damages if
+                                    various offences occur. This covers manual as well as computerised records. <br> <br>
+                                    
+                                    In implementing the legislation, at EASYCARE Suppliers UK Limitedwe adopt a simple and straightforward policy.
+                                    <br><br>
+                                    If you are unsuccessful in this application, we will keep this form on file for 6 months should you wish to be
+                                    considered for other vacancies.
+
+                                    <br><br>
+                                    
+                                        <input type="checkbox" name="option" id="option1" value="option1">
+                                        <label for="option1">Please tick to show your agreement to this</label>
+                                    
+                                    
+                                    <br>
+                                    
+                                    </div>
+
+
+                                    <header style="background-color: #91c53f; ">
+                                        <h6 style="color: white; padding: 10px;">Criminal Record Check/ ISA Declaration</h6>
+                                    </header>
+                                    <br>
+
+                                        <div class="col-12">
+                                        I have completed an application for a criminal record check and can further state that to the best of my knowledge and
+                                        belief, there will not be any positive disclosure made that will preclude me from working with vulnerable adults or
+                                        children. <br><br>
+                                        
+                                        I also give permission for a copy of the disclosure to which I am subject, being made available to a named authorised
+                                        person upon written request, who acts on behalf of a National Government or Local Government Department for auditing
+                                        purposes.
+                                        
+                                        
+                                        <br><br>
+
+                                        <div class="col-lg-6">
+                                            <div class="form-group">
+                                                <input type="name" name="crecord" placeholder="Name*" required="">
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="col-lg-6">
+                                            <div class="form-group">
+                                                <input type="text" name="signature" placeholder="Signature" required="">
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="col-lg-6">
+                                                <div class="form-group">
+                                                    <label for="date">Date:</label>
+                                                    <input type="date" name="criminalRecDate" placeholder="Date of Birth*" required="">
+                                                </div>
+                                            </div>
+                                        
+                                        </div>
+
+                                    <header style="background-color: #91c53f; ">
+                                        <h6 style="color: white; padding: 10px;">Working with Us</h6>
+                                    </header>
+                                    <br>
+
+
+                                    <div class="col-12">
+                                    It is our policy to employ the best qualified personnel and provide equal opportunity for the advancement of employees
+                                    including promotion and training and not to discriminate against any person because of race, colour, ethnic origin,
+                                    national origin, sex, sexual orientation, religion or belief, pregnancy, trans-gender status, marital or civil
+                                    partnership status, age or disability. <br><br>
+                                    
+                                    I authorise EASYCARE Suppliers UK Limitedto obtain references to support this application once an offer has been made
+                                    and accepted. I release EASYCARE Suppliers UK Limitedand referees from any liability caused by giving and receiving
+                                    information.
+<br><br>
+                                    
+                                    
+                                    
+                                    
+                                    </div>
+                                    <header style="background-color: #91c53f; ">
+                                        <h6 style="color: white; padding: 10px;">Employees Consent Form EasyCare Suppliers UK Limited</h6>
+                                    </header>
+                                    <br>
+                                    <div class="col-12">
+                                        I confirm that my information can be shared with clients of EASYCARE Suppliers UK Limitedand can be used for the payment
+                                        of duties I carried out. <br>
+                                        
+                                        I agree that I may work for more than an average of 48 hours a week. If I change my mind, I will give my employer up to
+                                        3 months’ notice in writing to end this agreement. <br><br>
+                                    
+                                        <input type="radio" name="option" id="option1" value="option1">
+                                        <label for="option1">Yes</label>
+                                    
+                                        <input type="radio" name="option" id="option2" value="option2">
+                                        <label for="option2">No</label>
+                                        <br><br>
+                                    
+                                      
+                                    </div>
+
+                                    <header style="background-color: #91c53f; ">
+                                        <h6 style="color: white; padding: 10px;">Declaration</h6>
+                                    </header>
+                                    <br>
+
+                                       I confirm that the information given on this form is, to the best of my knowledge, true and complete. Any false statement will be sufficient cause for rejection or, if employed, dismissal. <br><br>
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <input type="text" name="decName" placeholder="Name" required="">
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <input type="text" name="decSignature" placeholder="Signature" required="">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label for="date">Date :</label>
+                                            <input type="date" name="decDate" placeholder="Date Completed" required="">
+                                        </div>
+                                    </div>
+                                 
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <input type="text" name="bank" placeholder="Bank Details (Name)" required="">
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <input type="text" name="sortCode" placeholder="Sort Code" required="">
+                                        </div>
+                                    </div>
+
+                                       <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <input type="text" name="accountNumber" placeholder="Account No" required="">
+                                        </div>
+                                    </div>
+                                   
+                                 
                                 </div>
                                 <div class="col-12">
-                                    <div class="form-floating">
-                                        <input type="text" class="form-control bg-transparent border border-white" id="subject" placeholder="Subject">
-                                        <label for="subject">Subject</label>
+                                    <div class="form-group login-btn">
+                                        <button class="btn" type="submit">Send</button>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label class="checkbox-inline" for="2"><input name="news" id="2" type="checkbox">Do you consent to our team
+                                            reaching out to
+                                            you?</label>
                                     </div>
                                 </div>
-                                <div class="col-12">
-                                    <div class="form-floating">
-                                        <textarea class="form-control bg-transparent border border-white" placeholder="Leave a message here" id="message" style="height: 160px"></textarea>
-                                        <label for="message">Message</label>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <button class="btn btn-light text-primary w-100 py-3">Send Message</button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="col-lg-2 col-xl-2 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="bg-transparent rounded">
-                            <div class="d-flex flex-column align-items-center text-center mb-4">
-                                <div class="bg-white d-flex align-items-center justify-content-center mb-3" style="width: 90px; height: 90px; border-radius: 50px;"><i class="fa fa-map-marker-alt fa-2x text-primary"></i></div>
-                                <h4 class="text-dark">Addresses</h4>
-                                <p class="mb-0 text-white">123 ranking Street, New York, USA</p>
-                            </div>
-                            <div class="d-flex flex-column align-items-center text-center mb-4">
-                                <div class="bg-white d-flex align-items-center justify-content-center mb-3" style="width: 90px; height: 90px; border-radius: 50px;"><i class="fa fa-phone-alt fa-2x text-primary"></i></div>
-                                <h4 class="text-dark">Mobile</h4>
-                                <p class="mb-0 text-white">+012 345 67890</p>
-                                <p class="mb-0 text-white">+012 345 67890</p>
-                            </div>
-                           
-                            <div class="d-flex flex-column align-items-center text-center">
-                                <div class="bg-white d-flex align-items-center justify-content-center mb-3" style="width: 90px; height: 90px; border-radius: 50px;"><i class="fa fa-envelope-open fa-2x text-primary"></i></div>
-                                <h4 class="text-dark">Email</h4>
-                                <p class="mb-0 text-white">info@example.com</p>
-                                <p class="mb-0 text-white">info@example.com</p>
-                            </div>
+                            </form>
+                            <!--/ End Form -->
                         </div>
                     </div>
-                    <div class="col-lg-5 col-xl-5 wow fadeInRight" data-wow-delay="0.3s">
-                        <div class="d-flex justify-content-center mb-4">
-                            <a class="btn btn-lg-square btn-light rounded-circle mx-2" href=""><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-lg-square btn-light rounded-circle mx-2" href=""><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-lg-square btn-light rounded-circle mx-2" href=""><i class="fab fa-instagram"></i></a>
-                            <a class="btn btn-lg-square btn-light rounded-circle mx-2" href=""><i class="fab fa-linkedin-in"></i></a>
-                        </div>
-                        <div class="rounded h-100">
-                            <iframe class="rounded w-100" 
-                            style="height: 500px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387191.33750346623!2d-73.97968099999999!3d40.6974881!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sbd!4v1694259649153!5m2!1sen!2sbd" 
-                            loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                        </div>
-                    </div>
+
+<br><br>
+                    Document Uploads (Required)
+                    <br><br>
+
+                    <div class="button">
+									<a href="#" class="btn">48 Hour Waiver*</a> 
+									<a href="#" class="btn primary">Agency Worker Handbook Declaration *</a>
+                                    	<a href="#" class="btn">Confidentiality Agreement *</a>
+									<a href="#" class="btn primary">Healthcare Declaration *</a><br><br>
+								</div>
+
+
+                                 <div class="button">
+									<a href="#" class="btn">Passport/Right to Work *</a> 
+									<a href="#" class="btn primary">Proof of Address *</a>
+                                    	<a href="#" class="btn">Proof of National Insurance Number</a><br><br>
+									<a href="#" class="btn primary">CV *</a>
+                                    <a href="#" class="btn primary">ID Photo (to create staff profile) *</a><br><br>
+								</div>
+
+
+                                <div class="button">
+								
+									<a href="#" class="btn primary">Up to date DBS Check Certificate/DBS Reference Number *</a>
+                                    <a href="#" class="btn primary">For HCA's - Mandatory Training Certificate</a><br><br>
+                                          <a href="#" class="btn primary">Registered Nurses - NMC Pin Training certificate- Administration of medicines if applicable **</a><br><br>
+                                                <a href="#" class="btn primary">Chefs - Level 1/2/3 Diploma in professional cookery or level 4 Diploma in professional Culinary Arts</a><br><br>
+                                                      <a href="#" class="btn primary">Bank Details and Tax Code *
+                                  </a><br><br>
+								</div>
                 </div>
             </div>
+          
         </div>
-        <!-- Contact End -->
+    </section>
+    <!--/ End Contact Us -->
+
+
+
+        
 
 
         <!-- Footer Start -->
