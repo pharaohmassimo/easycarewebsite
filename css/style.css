@@ -199,7 +199,29 @@ FUN FACTS
 /*===================
 	End Fun Facts
 =====================*/
-
+/*========================
+	Start Clients CSS
+==========================*/
+.clients{
+	/*background-image:url('img/carousel-1.png');  */
+	background-size:cover;
+	background-position:center;
+	padding:100px 0px;
+	position:relative;
+}
+.clients .single-clients{
+	
+}
+.clients .single-clients img {
+	width: 100%;
+	cursor: pointer;
+	text-align: center;
+	float: none;
+	padding: 0 35px;
+}
+/*========================
+	End Clients CSS
+==========================*/
 
 
 

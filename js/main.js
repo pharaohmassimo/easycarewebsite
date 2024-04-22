@@ -108,12 +108,39 @@
         }
     });
 
-    
    //Counterup for the stats section
 		$('.counter').counterUp({
 			delay:20,
 			time:2000
 		});
+
+    //clients slider js code
+		$('.clients-slider').owlCarousel({
+			items:5,
+			autoplay:true,
+			autoplayTimeout:3500,
+			margin:15,
+			smartSpeed: 400,
+			autoplayHoverPause:true,
+			loop:true,
+			nav:false,
+			dots:false,
+			responsive:{
+				300: {
+					items:1,
+				},
+				480: {
+					items:2,
+				},
+				768: {
+					items:3,
+				},
+				1170: {
+					items:5,
+				},
+			}
+		});
+    
     
    // Back to top button
    $(window).scroll(function () {
