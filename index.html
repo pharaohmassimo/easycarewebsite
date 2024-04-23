@@ -36,6 +36,20 @@
 
         <!-- Template Stylesheet -->
         <link href="css/style.css" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
+<style>
+
+
+/* Slider */ 
+.slick-slide {
+  margin: 0px 10px;
+  
+} 
+.slick-slide img {
+  width: 100%;
+}
+</style>
     </head>
 
     <!--Start of Tawk.to Script-->
@@ -300,39 +314,6 @@
                             </div>
                         </div>
                     </div>
-            <!--        <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="row-cols-1 feature-item p-4">
-                            <div class="col-12">
-                                <div class="feature-icon mb-4">
-                                    <div class="p-3 d-inline-flex bg-white rounded">
-                                        <i class="fab fa-pied-piper fa-4x text-primary"></i>
-                                    </div>
-                                </div>
-                                <div class="feature-content d-flex flex-column">
-                                    <h5 class="mb-4">Therapy Goals</h5>
-                                    <p class="mb-0">Dolor, sit amet consectetur adipisicing elit. Soluta inventore cum accusamus,</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.7s">
-                        <div class="row-cols-1 feature-item p-4">
-                            <div class="col-12">
-                                <div class="feature-icon mb-4">
-                                    <div class="p-3 d-inline-flex bg-white rounded">
-                                        <i class="fas fa-user-md fa-4x text-primary"></i>
-                                    </div>
-                                </div>
-                                <div class="feature-content d-flex flex-column">
-                                    <h5 class="mb-4">Licensed Therapist</h5>
-                                    <p class="mb-0">Dolor, sit amet consectetur adipisicing elit. Soluta inventore cum accusamus,</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div> -->
-                <!--    <div class="col-12 text-center wow fadeInUp" data-wow-delay="0.2s">
-                        <a href="#" class="btn btn-primary rounded-pill text-white py-3 px-5">More Details</a>
-                    </div> -->
                 </div>
             </div>
         </div>
@@ -634,6 +615,39 @@
         </div>
         <!-- Blog End -->
 
+        <!--START CLIENTS-->
+        <div class="container" style="padding-bottom: 5%;">
+            <section class="customer-logos slider">
+                <div class="slide">
+                <img decoding="async" src="img/clientcqc.png">
+                </div>
+                <div class="slide">
+                <img decoding="async" src="img/clientb.png">
+                </div>
+                <div class="slide">
+                <img decoding="async" src="img/clientmagnit.png">
+                </div>
+                <div class="slide">
+                <img decoding="async" src="img/client1.png">
+                </div>
+                <div class="slide">
+                <img decoding="async" src="img/clientmagnit.png">
+                </div>
+                <div class="slide">
+                <img decoding="async" src="img/clientcqc.png">
+                </div>
+                <div class="slide">
+                <img decoding="async" src="img/clientb.png">
+                </div>
+                <div class="slide">
+                <img decoding="async" src="img/clientmagnit.png">
+                </div>
+            </section>
+        </div>
+        <!--END CLIENTS-->
+
+
+
 
         <!-- Footer Start -->
         <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
@@ -720,6 +734,39 @@
 
         <!-- Template Javascript -->
         <script src="js/main.js"></script>
+
+        <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+        <script src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+
+        <script>
+                    $(document).ready(function () {
+                        $(".customer-logos").slick({
+                            slidesToShow: 6,
+                            slidesToScroll: 1,
+                            autoplay: true,
+                            autoplaySpeed: 1500,
+                            arrows: false,
+                            dots: false,
+                            pauseOnHover: false,
+                        responsive: [
+                          {
+                            breakpoint: 768,
+                            settings: {
+                              slidesToShow: 4
+                            }
+                          },
+                          {
+                            breakpoint: 520,
+                            settings: {
+                              slidesToShow: 3
+                            }
+                          }
+                        ]
+                      });
+                    });
+        </script>
         
     </body>
 
