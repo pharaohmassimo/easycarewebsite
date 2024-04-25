@@ -37,6 +37,21 @@ body{
 .btn {
     font-weight: 600;
     transition: .5s;
+    background-color: #52b9da;
+}
+
+.form-group {
+	position: relative;
+	display: block;
+	margin: 0 0 20px;
+}
+
+.form-group input{
+	border: 1px solid transparent;
+	border: 1px solid #eee;
+	border-radius: 5px;
+    font-size: small;
+    font-family: 'Ubuntu', sans-serif;
 }
 
 .btn-square {
