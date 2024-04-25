@@ -38,8 +38,15 @@ body{
     font-weight: 600;
     transition: .5s;
     background-color: #52b9da;
+    margin: 0 0 20px;
 }
 
+
+.btn primary{
+    font-weight: 600;
+    transition: .5s;
+    background-color: #52b9da;
+}
 .form-group {
 	position: relative;
 	display: block;
