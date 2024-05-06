@@ -1,5 +1,9 @@
 <?php
 // Check if the form is submitted
+
+
+
+echo 'Reacjing here';
 if (isset($_POST['submit'])) {
     // Get the form fields
     $name = $_POST['name'];
@@ -68,6 +72,16 @@ if (empty($referenceName) || empty($FullTime) || empty($PartTime) || empty($Week
     exit;
 }
 
+
+require_once('class.phpmailer.php');
+
+$mail = new PHPMailer(); // defaults to using php "mail()"
+	// $mail->isSMTP()
+	$mail->AddReplyTo('info@easycareltd.co.uk');
+	$mail->SetFrom($email);
+	$mail->AddAddress('info@easycareltd.co.uk');
+
+
     // Email information
     $to = 'info@easycareltd.co.uk';
     $subject = 'Job Application';
@@ -123,6 +137,28 @@ if (empty($referenceName) || empty($FullTime) || empty($PartTime) || empty($Week
     . "Bank: $bank\n"
     . "Sort Code: $sortCode\n"
     . "Account Number: $accountNumber\n";
+
+
+    $mail->Subject ="New Application from "$FirstName $Surname;
+	$mail->AltBody = $message; 
+	$mail->MsgHTML('This is a new Application from ' $FirstName);
+
+
+    if(!$mail->Send()) {
+		 //if unable to create new record
+	    echo json_encode(array(
+	    	'status' => 'Error',
+	    	//'message'=> 'There has been an error, please try again.'
+	    	'message' => 'There has been an error, please try again.<pre>'.$mail->ErrorInfo.'</pre>'
+	    ));
+	} else {
+	   echo json_encode(array(
+			'status' => 'Success',
+			'message'=> 'Application has been successfully'
+		));
+	}
+
+
 
 
 
