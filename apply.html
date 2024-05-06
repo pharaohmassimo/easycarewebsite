@@ -109,12 +109,14 @@
 
 
 
-
-<div class="d-flex align-items-center">
-            <a href="index.html" class="navbar-brand p-0">
-                <img class ="logo" src="img/easycarelogo.jpg" alt="Logo" >
-            </a>
-</div>
+   <br>
+<div class="container-fluid position-relative p-0">
+  <div class="d-flex align-items-center">
+    <a href="index.html" class="navbar-brand p-0">
+      <img class="logo img-fluid" src="img/easycarelogo.jpg" alt="Logo">
+    </a>
+  </div>
+</div>  
 
 
 
@@ -1085,7 +1087,7 @@
   document.querySelector('form').addEventListener('submit', function(event) {
 
 
-    alert("reaching here");
+ 
 
       event.preventDefault(); // Prevent form submission
 
@@ -1103,9 +1105,17 @@
 
                     console.log(data);
 
-                    alert(data);
+                    if(data.status == "Success"){
+                    alert('Submitted Successfully');
+
+
+                    }else if (data.status == "Error"){
+                    alert(data.message);
+
+
+                    }
 				
-					  alert('Submitted Successfully');
+					
 
 					
 				},
@@ -1118,12 +1128,14 @@
 
 			});
 
-               alert("reaching here");
+              
   });
 </script> 
      
 
 <!-- <script>
+
+
  
 		
 	
