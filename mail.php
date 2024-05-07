@@ -1,76 +1,82 @@
 <?php
-// Check if the form is submitted
 
+if (true) {
 
-
-echo 'Reacjing here';
-if (isset($_POST['submit'])) {
     // Get the form fields
     $name = $_POST['name'];
     $position = $_POST['position'];
     $date = $_POST['date'];
+    $referenceName = $_POST['referenceName'];
+    $FullTime = $_POST['FullTime'];
+    $PartTime = $_POST['PartTime'];
+    $Weekends = $_POST['Weekends'];
+    $title = $_POST['title'];
+    $Surname = $_POST['Surname'];
+    $FirstName = $_POST['FirstName'];
+    $phone = $_POST['phone'];
+    $otherName = $_POST['otherName'];
+    $homePhone = $_POST['homePhone'];
+    $workphone = $_POST['workphone'];
+    $email = $_POST['email'];
+    $insuranceNumber = $_POST['insuranceNumber'];
+    $dob = $_POST['dob'];
+    $UKDriversLicenceYes = $_POST['UKDriversLicenceYes'];
+    $UKDriversLicenceNo = $_POST['UKDriversLicenceNo'];
+    $kinname = $_POST['kinname'];
+    $kinContact = $_POST['kinContact'];
+    $kinRelationship = $_POST['kinRelationship'];
+    $restrictions = $_POST['restrictions'];
+    $permission = $_POST['permission'];
+    $regNumber = $_POST['regNumber'];
+    $doexpiry = $_POST['doexpiry'];
+    $dorevalidation = $_POST['dorevalidation'];
+    $insurance = $_POST['insurance'];
+    $policy = $_POST['policy'];
+    $policyExpiry = $_POST['policyExpiry'];
+    $yearStudy = $_POST['yearStudy'];
+    $previousEmployer = $_POST['previousEmployer'];
+    $addressEmployer = $_POST['addressEmployer'];
+    $jobtitle = $_POST['jobtitle'];
+    $duties = $_POST['duties'];
+    $reasonsLeaving = $_POST['reasonsLeaving'];
+    $refCompany = $_POST['refCompany'];
+    $refDetails = $_POST['refDetails'];
+    $refAddress = $_POST['refAddress'];
+    $refPhone = $_POST['refPhone'];
+    $refEmail = $_POST['refEmail'];
+    $refDateEmployment = $_POST['refDateEmployment'];
+    $disabilityYes = $_POST['disabilityYes'];
+    $disabilityNo = $_POST['disabilityNo'];
+    $disabilityReference = $_POST['disabilityReference'];
+    $disabilityReferenceName = $_POST['disabilityReferenceName'];
+    $prescribedMedications = $_POST['prescribedMedications'];
+    $attentionDetail = $_POST['attentionDetail'];
+    $crecord = $_POST['crecord'];
+    $signature = $_POST['signature'];
+    $criminalRecDate = $_POST['criminalRecDate'];
+    $decName = $_POST['decName'];
+    $decSignature = $_POST['decSignature'];
+    $decDate = $_POST['decDate'];
+    $bank = $_POST['bank'];
+    $sortCode = $_POST['sortCode'];
+    $accountNumber = $_POST['accountNumber'];
 
-$referenceName = $_POST['referenceName'];
-$FullTime = $_POST['FullTime'];
-$PartTime = $_POST['PartTime'];
-$Weekends = $_POST['Weekends'];
-$title = $_POST['title'];
-$Surname = $_POST['Surname'];
-$FirstName = $_POST['FirstName'];
-$phone = $_POST['phone'];
-$otherName = $_POST['otherName'];
-$homePhone = $_POST['homePhone'];
-$workphone = $_POST['workphone'];
-$email = $_POST['email'];
-$insuranceNumber = $_POST['insuranceNumber'];
-$dob = $_POST['dob'];
-$UKDriversLicenceYes = $_POST['UKDriversLicenceYes'];
-$UKDriversLicenceNo = $_POST['UKDriversLicenceNo'];
-$kinname = $_POST['kinname'];
-$kinContact = $_POST['kinContact'];
-$kinRelationship = $_POST['kinRelationship'];
-$restrictions = $_POST['restrictions'];
-$permission = $_POST['permission'];
-$regNumber = $_POST['regNumber'];
-$doexpiry = $_POST['doexpiry'];
-$dorevalidation = $_POST['dorevalidation'];
-$insurance = $_POST['insurance'];
-$policy = $_POST['policy'];
-$policyExpiry = $_POST['policyExpiry'];
-$yearStudy = $_POST['yearStudy'];
-$previousEmployer = $_POST['previousEmployer'];
-$addressEmployer = $_POST['addressEmployer'];
-$jobtitle = $_POST['jobtitle'];
-$duties = $_POST['duties'];
-$reasonsLeaving = $_POST['reasonsLeaving'];
-$refCompany = $_POST['refCompany'];
-$refDetails = $_POST['refDetails'];
-$refAddress = $_POST['refAddress'];
-$refPhone = $_POST['refPhone'];
-$refEmail = $_POST['refEmail'];
-$refDateEmployment = $_POST['refDateEmployment'];
-$disabilityYes = $_POST['disabilityYes'];
-$disabilityNo = $_POST['disabilityNo'];
-$disabilityReference = $_POST['disabilityReference'];
-$disabilityReferenceName = $_POST['disabilityReferenceName'];
-$prescribedMedications = $_POST['prescribedMedications'];
-$attentionDetail = $_POST['attentionDetail'];
-$crecord = $_POST['crecord'];
-$signature = $_POST['signature'];
-$criminalRecDate = $_POST['criminalRecDate'];
-$decName = $_POST['decName'];
-$decSignature = $_POST['decSignature'];
-$decDate = $_POST['decDate'];
-$bank = $_POST['bank'];
-$sortCode = $_POST['sortCode'];
-$accountNumber = $_POST['accountNumber'];
+
+   // Validate form fields
+    if (empty($referenceName) || empty($FullTime) || empty($PartTime) || empty($Weekends) || empty($title) || empty($Surname) || empty($FirstName) || empty($phone) || empty($otherName) || empty($homePhone) || empty($workphone) || empty($email) || empty($insuranceNumber) || empty($dob) || empty($UKDriversLicenceYes) || empty($UKDriversLicenceNo) || empty($kinname) || empty($kinContact) || empty($kinRelationship) || empty($restrictions) || empty($permission) || empty($regNumber) || empty($doexpiry) || empty($dorevalidation) || empty($insurance) || empty($policy) || empty($policyExpiry) || empty($yearStudy) || empty($previousEmployer) || empty($addressEmployer) || empty($jobtitle) || empty($duties) || empty($reasonsLeaving) || empty($refCompany) || empty($refDetails) || empty($refAddress) || empty($refPhone) || empty($refEmail) || empty($refDateEmployment) || empty($disabilityYes) || empty($disabilityNo) || empty($disabilityReference) || empty($disabilityReferenceName) || empty($prescribedMedications) || empty($attentionDetail) || empty($crecord) || empty($signature) || empty($criminalRecDate) || empty($decName) || empty($decSignature) || empty($decDate) || empty($bank) || empty($sortCode) || empty($accountNumber) || empty($date)) {
+        echo 'Please fill in all the required fields.';
+        exit;
+    }
 
 
-    // Validate form fields
-if (empty($referenceName) || empty($FullTime) || empty($PartTime) || empty($Weekends) || empty($title) || empty($Surname) || empty($FirstName) || empty($phone) || empty($otherName) || empty($homePhone) || empty($workphone) || empty($email) || empty($insuranceNumber) || empty($dob) || empty($UKDriversLicenceYes) || empty($UKDriversLicenceNo) || empty($kinname) || empty($kinContact) || empty($kinRelationship) || empty($restrictions) || empty($permission) || empty($regNumber) || empty($doexpiry) || empty($dorevalidation) || empty($insurance) || empty($policy) || empty($policyExpiry) || empty($yearStudy) || empty($previousEmployer) || empty($addressEmployer) || empty($jobtitle) || empty($duties) || empty($reasonsLeaving) || empty($refCompany) || empty($refDetails) || empty($refAddress) || empty($refPhone) || empty($refEmail) || empty($refDateEmployment) || empty($disabilityYes) || empty($disabilityNo) || empty($disabilityReference) || empty($disabilityReferenceName) || empty($prescribedMedications) || empty($attentionDetail) || empty($crecord) || empty($signature) || empty($criminalRecDate) || empty($decName) || empty($decSignature) || empty($decDate) || empty($bank) || empty($sortCode) || empty($accountNumber) || empty($date)) {
-    echo 'Please fill in all the required fields.';
-    exit;
-}
+require_once('class.phpmailer.php');
+
+    $mail = new PHPMailer(); // defaults to using php "mail()"
+	$mail->isSMTP()
+	$mail->AddReplyTo('info@easycareltd.co.uk');
+	$mail->SetFrom($email);
+	$mail->AddAddress('info@easycareltd.co.uk');
+
 
 
 require_once('class.phpmailer.php');
@@ -86,8 +92,8 @@ $mail = new PHPMailer(); // defaults to using php "mail()"
     $to = 'info@easycareltd.co.uk';
     $subject = 'Job Application';
    $message = "Name: $Surname $FirstName\n"
-    . "Position Applied For: $title\n"
-    . "Date Completed: $date\n\n"
+    ."Position Applied For: $position\n"
+    . "Date Completed: $date\n\n";
     . "Reference Name: $referenceName\n"
     . "Full Time: $FullTime\n"
     . "Part Time: $PartTime\n"
@@ -138,12 +144,10 @@ $mail = new PHPMailer(); // defaults to using php "mail()"
     . "Sort Code: $sortCode\n"
     . "Account Number: $accountNumber\n";
 
-
-    $mail->Subject ="New Application from "$FirstName $Surname;
+    $mail->Subject ="New Vacancy Application"; 
 	$mail->AltBody = $message; 
-	$mail->MsgHTML('This is a new Application from ' $FirstName);
-
-
+	$mail->MsgHTML('This is a new Application from ' );
+    
     if(!$mail->Send()) {
 		 //if unable to create new record
 	    echo json_encode(array(
@@ -157,29 +161,5 @@ $mail = new PHPMailer(); // defaults to using php "mail()"
 			'message'=> 'Application has been successfully'
 		));
 	}
-
-
-
-
-
-       // Additional email headers for SMTP configuration (if required)
-    $headers .= "X-Mailer: PHP/" . phpversion() . "\r\n";
-    $headers .= "SMTPHost:smtp.gmail.com\r\n";
-    $headers .= "SMTPAuth: true\r\n";
-    $headers .= "SMTPUsername: strokeprotocolpetra@gmail.com\r\n";
-    $headers .= "SMTPPassword: ztbsgywfqawuoesp\r\n";
-    $headers .= "SMTPSecure: ssl\r\n";
-    $headers .= "Port: 465\r\n";
-
-    // Send email
-    $headers = 'From: ' . $name . "\r\n" .
-        'Reply-To: ' . $name . "\r\n" .
-        'X-Mailer: PHP/' . phpversion();
-
-    if (mail($to, $subject, $message, $headers)) {
-        echo 'Email sent successfully';
-    } else {
-        echo 'Unable to send email';
-    }
 }
 ?>
