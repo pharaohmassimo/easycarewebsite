@@ -76,16 +76,6 @@ if (true) {
 	$mail->AddAddress('noreply@easycareltd.co.uk');
 
 
-
-require_once('class.phpmailer.php');
-
-$mail = new PHPMailer(); // defaults to using php "mail()"
-	// $mail->isSMTP()
-	$mail->AddReplyTo('info@easycareltd.co.uk');
-	$mail->SetFrom($email);
-	$mail->AddAddress('info@easycareltd.co.uk');
-
-
     // Email information
    
 $message = "<p><strong>Name:</strong> $Surname $FirstName</p>"
