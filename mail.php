@@ -8,21 +8,18 @@ if (true) {
     $position = $_POST['position'];
     $date = $_POST['date'];
     $referenceName = $_POST['referenceName'];
-    $FullTime = $_POST['FullTime'];
-    $PartTime = $_POST['PartTime'];
-    $Weekends = $_POST['Weekends'];
+    $availability = $_POST['availability'];
+   
     $title = $_POST['title'];
     $Surname = $_POST['Surname'];
     $FirstName = $_POST['FirstName'];
     $phone = $_POST['phone'];
-    $otherName = $_POST['otherName'];
+    $otherName = $_POST['otherNameName'];
     $homePhone = $_POST['homePhone'];
     $workphone = $_POST['workphone'];
     $email = $_POST['email'];
     $insuranceNumber = $_POST['insuranceNumber'];
     $dob = $_POST['dob'];
-    $UKDriversLicenceYes = $_POST['UKDriversLicenceYes'];
-    $UKDriversLicenceNo = $_POST['UKDriversLicenceNo'];
     $kinname = $_POST['kinname'];
     $kinContact = $_POST['kinContact'];
     $kinRelationship = $_POST['kinRelationship'];
@@ -62,6 +59,23 @@ if (true) {
     $sortCode = $_POST['sortCode'];
     $accountNumber = $_POST['accountNumber'];
 
+
+    $otherName = isset($_POST['otherName']) ? $_POST['otherName'] : '';
+    $ukDriversLicense = isset($_POST['ukDriversLicense']) ? $_POST['ukDriversLicense'] : '';
+    $disability = isset($_POST['disability']) ? $_POST['disability'] : '';
+    $nightShift = isset($_POST['nightShift']) ? $_POST['nightShift'] : '';
+    $diabetic = isset($_POST['diabetic']) ? $_POST['diabetic'] : '';
+    $mobility = isset($_POST['mobility']) ? $_POST['mobility'] : '';
+    $mobility = isset($_POST['specialistCare']) ? $_POST['specialistCare'] : '';      
+    $fitnessProblem = isset($_POST['fitnessProblem']) ? $_POST['fitnessProblem'] : '';
+    $stomachUlcers = isset($_POST['stomachUlcers']) ? $_POST['stomachUlcers'] : '';
+    $bowelProblems = isset($_POST['bowelProblems']) ? $_POST['bowelProblems'] : '';
+    $chronicChest = isset($_POST['chronicChest']) ? $_POST['chronicChest'] : '';
+    $sleepDisturbance = isset($_POST['sleepDisturbance']) ? $_POST['sleepDisturbance'] : '';
+    $nightFitness = isset($_POST['nightFitness']) ? $_POST['nightFitness'] : '';
+    $strictTimetable = isset($_POST['strictTimetable']) ? $_POST['strictTimetable'] : '';
+    $consent = isset($_POST['consent']) ? $_POST['consent'] : '';
+
     
     require 'PHPMailer/src/PHPMailer.php';
     require 'PHPMailer/src/SMTP.php';
@@ -83,17 +97,16 @@ $message = "<p><strong>Name:</strong> $Surname $FirstName</p>"
     . "<p><strong>Date Completed:</strong> $date</p>"
     . "<br>"
     . "<p><strong>Reference Name:</strong> $referenceName</p>"
-    . "<p><strong>Full Time:</strong> $FullTime</p>"
-    . "<p><strong>Part Time:</strong> $PartTime</p>"
-    . "<p><strong>Weekends:</strong> $Weekends</p>"
+    . "<p><strong>Availability:</strong> $availability</p>"    
     . "<p><strong>Phone:</strong> $phone</p>"
     . "<p><strong>Other Name:</strong> $otherName</p>"
     . "<p><strong>Home Phone:</strong> $homePhone</p>"
     . "<p><strong>Work Phone:</strong> $workphone</p>"
     . "<p><strong>Email:</strong> $email</p>"
     . "<p><strong>Insurance Number:</strong> $insuranceNumber</p>"
-    . "<p><strong>Date of Birth:</strong> $dob</p>"
-    . "<p><strong>UK Driver's Licence (Yes/No):</strong> $UKDriversLicenceYes</p>"
+    . "<p><strong>Date of Birth:</strong> $dob</p>"    
+    . "<p><strong>UK Driver's Licence :</strong> $ukDriversLicense</p>"
+    ."<br>"
     . "<p><strong>Kin Name:</strong> $kinname</p>"
     . "<p><strong>Kin Contact:</strong> $kinContact</p>"
     . "<p><strong>Kin Relationship:</strong> $kinRelationship</p>"
@@ -120,6 +133,20 @@ $message = "<p><strong>Name:</strong> $Surname $FirstName</p>"
     . "<p><strong>Disability (Yes/No):</strong> $disabilityYes</p>"
     . "<p><strong>Disability Reference:</strong> $disabilityReference</p>"
     . "<p><strong>Disability Reference Name:</strong> $disabilityReferenceName</p>"
+
+    ."<br>"
+    . "<p><strong>Problem in past that has prevented you from working at night:</strong> $nightShift</p>"
+    . "<p><strong>Diabetic:</strong> $diabetic</p>"
+    . "<p><strong>Heart problems affecting fitness:</strong> $fitnessProblem</p>"
+    . "<p><strong>Duodenal or stomach ulcers in the past:</strong> $stomachUlcers</p>"
+    . "<p><strong>Continuing bowel problem, for instance following major surgery:</strong> $bowelProblems</p>"
+    . "<p><strong>Chronic chest problem such as asthma, emphysema or bronchiectasis:</strong> $chronicChest</p>"
+    . "<p><strong>Disability affecting mobility that will cause difficulties in arranging night work:</strong> $mobility</p>"
+    . "<p><strong>Recurrent or continuing sleep disturbance requiring medical advice:</strong> $sleepDisturbance</p>"
+    . "<p><strong>Taking any medication to a strict timetable:</strong> $strictTimetable</p>"
+    . "<p><strong>Other health problem that affects your fitness for night work:</strong> $nightFitness</p>"
+    . "<p><strong>Having specialist care requiring your attendance at hospital clinics for treatment:</strong> $specialistCare</p>"
+
     . "<p><strong>Prescribed Medications:</strong> $prescribedMedications</p>"
     . "<p><strong>Attention to Detail:</strong> $attentionDetail</p>"
     . "<p><strong>Criminal Record:</strong> $crecord</p>"

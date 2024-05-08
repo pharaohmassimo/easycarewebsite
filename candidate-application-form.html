@@ -232,14 +232,14 @@
                                     <div class="col-12">
                                         Availability? <br><br>
                                     
-                                        <input type="radio" name="FullTime" id="option1" value="FullTime">
+                                        <input type="radio" name="availability" id="option1" value="FullTime">
                                         <label for="option1">Full Time</label> 
                                     
-                                        <input type="radio" name="PartTime" id="option2" value="PartTime">
+                                        <input type="radio" name="availability" id="option2" value="PartTime">
                                         <label for="option2">Part Time</label>
 
-                                        <input type="radio" name="Weekends" id="option2" value="Weekends">
-                                        <label for="option2">Weekends</label>
+                                        <input type="radio" name="availability" id="option3" value="Weekends">
+                                        <label for="option3">Weekends</label>
                                         <br><br>
                                     
                                        
@@ -280,16 +280,16 @@
                                     <div class="col-12">
                                         Have you ever been known by any other name? <br><br>
                                     
-                                        <input type="radio" name="option" id="option1" value="option1">
+                                        <input type="radio" name="otherName" id="option1" value="Yes">
                                         <label for="option1">Yes</label>
                                     
-                                        <input type="radio" name="option" id="option2" value="option2">
+                                        <input type="radio" name="otherName" id="option2" value="No">
                                         <label for="option2">No</label>
                                         <br><br>
                                     
                                         <div class="col-lg-6">
                                             <div class="form-group">
-                                                <input type="text" class="form-control py-3 border-primary bg-transparent text-black" name="otherName" placeholder="If yes, please specify the full name and dates used:"
+                                                <input type="text" class="form-control py-3 border-primary bg-transparent text-black" name="otherNameName" placeholder="If yes, please specify the full name and dates used:"
                                                     required="">
                                             </div>
                                         </div>
@@ -339,10 +339,10 @@
 
                                 Do you hold a valid UK Drivers Licence? <br><br>
 
-                                <input type="radio" name="UKDriversLicenceYes" id="option1" value="option1">
+                                <input type="radio" name="UKDriversLicence" id="option1" value="Yes">
                                 <label for="option1">Yes</label>
                                 
-                                <input type="radio" name="UKDriversLicenceNo" id="option2" value="option2">
+                                <input type="radio" name="UKDriversLicence" id="option2" value="No">
                                 <label for="option2">No</label>
 
                                 <br><br>
@@ -545,7 +545,7 @@
                                 
                                     <div class="col-lg-6">
                                         <div class="form-group">
-                                            <input type="email" name="refEmail" placeholder="Email" required="">
+                                            <input type="email" class="form-control py-3 border-primary bg-transparent text-black"  name="refEmail" placeholder="Email" required="">
                                         </div>
                                     </div>
                                 
@@ -574,10 +574,10 @@
                                     Do you have any health issues or a disability which may make it difficult for you to carry out functions which are
                                     essential for the role you seek? <br><br>
 
-                                    <input type="radio" name="disabilityYes" id="option1" value="option1">
+                                    <input type="radio" name="disability" id="option1" value="option1">
                                     <label for="option1">Yes</label>
 
-                                    <input type="radio" name="disabilityNo" id="option2" value="option2">
+                                    <input type="radio" name="disability" id="option2" value="option2">
                                     <label for="option2">No</label>
                                     <br><br>
 
@@ -614,10 +614,10 @@
                                     Have you had any medical problem in the past that has prevented you from working at night?
                                  </div>
                                  <div class="col-3">
-                                    <input type="radio" name="option" id="option1" value="option1">
+                                    <input type="radio" name="nightShift" id="option1" value="Yes">
                                     <label for="option1">Yes</label>
                                 
-                                    <input type="radio" name="option" id="option2" value="option2">
+                                    <input type="radio" name="nightShift" id="option2" value="No">
                                     <label for="option2">No</label>
                                     <br><br>
                                 
@@ -630,10 +630,10 @@
                                     Are you diabetic?
                                  </div>
                                  <div class="col-3">
-                                    <input type="radio" name="option" id="option1" value="option1">
+                                    <input type="radio" name="diabetic" id="option1" value="Yes">
                                     <label for="option1">Yes</label>
                                 
-                                    <input type="radio" name="option" id="option2" value="option2">
+                                    <input type="radio" name="diabetic" id="option2" value="No">
                                     <label for="option2">No</label>
                                     <br><br>
                                 
@@ -645,10 +645,10 @@
                           Do you have angina, or other heart problems that may affect your fitness?
                                  </div>
                                  <div class="col-3">
-                                    <input type="radio" name="option" id="option1" value="option1">
+                                    <input type="radio" name="fitnessProblem" id="option1" value="Yes">
                                     <label for="option1">Yes</label>
                                 
-                                    <input type="radio" name="option" id="option2" value="option2">
+                                    <input type="radio" name="fitnessProblem" id="option2" value="No">
                                     <label for="option2">No</label>
                                     <br><br>
                                 
@@ -660,10 +660,10 @@
                                   Have you had duodenal or stomach ulcers in the past, or are you under treatment for those at present?
                                  </div>
                                  <div class="col-3">
-                                    <input type="radio" name="option" id="option1" value="option1">
+                                    <input type="radio" name="stomachUlcers" id="option1" value="Yes">
                                     <label for="option1">Yes</label>
                                 
-                                    <input type="radio" name="option" id="option2" value="option2">
+                                    <input type="radio" name="stomachUlcers" id="option2" value="No">
                                     <label for="option2">No</label>
                                     <br><br>
                                 
@@ -675,10 +675,10 @@
                        Have you had any continuing bowel problem, for instance following major surgery?
                                  </div>
                                  <div class="col-3">
-                                    <input type="radio" name="option" id="option1" value="option1">
+                                    <input type="radio" name="bowelProblem" id="option1" value="Yes">
                                     <label for="option1">Yes</label>
                                 
-                                    <input type="radio" name="option" id="option2" value="option2">
+                                    <input type="radio" name="bowelProblem" id="option2" value="No">
                                     <label for="option2">No</label>
                                     <br><br>
                                 
@@ -690,10 +690,10 @@
                                   Do you have any chronic chest problem such as asthma, emphysema or bronchiectasis?
                                  </div>
                                  <div class="col-3">
-                                    <input type="radio" name="option" id="option1" value="option1">
+                                    <input type="radio" name="chronicChest" id="option1" value="Yes">
                                     <label for="option1">Yes</label>
                                 
-                                    <input type="radio" name="option" id="option2" value="option2">
+                                    <input type="radio" name="chronicChest" id="option2" value="No">
                                     <label for="option2">No</label>
                                     <br><br>
                                 
@@ -705,10 +705,10 @@
                                    Do you have any disability affecting mobility that will cause difficulties in arranging night work?
                                  </div>
                                  <div class="col-3">
-                                    <input type="radio" name="option" id="option1" value="option1">
+                                    <input type="radio" name="mobility" id="option1" value="Yes">
                                     <label for="option1">Yes</label>
                                 
-                                    <input type="radio" name="option" id="option2" value="option2">
+                                    <input type="radio" name="mobility" id="option2" value="No">
                                     <label for="option2">No</label>
                                     <br><br>
                                 
@@ -720,10 +720,10 @@
                                     Do you have any recurrent or continuing sleep disturbance requiring medical advice?
                                  </div>
                                  <div class="col-3">
-                                    <input type="radio" name="option" id="option1" value="option1">
+                                    <input type="radio" name="sleepDisturbance" id="option1" value="Yes">
                                     <label for="option1">Yes</label>
                                 
-                                    <input type="radio" name="option" id="option2" value="option2">
+                                    <input type="radio" name="sleepDisturbance" id="option2" value="No">
                                     <label for="option2">No</label>
                                     <br><br>
                                 
@@ -735,10 +735,10 @@
                                   Are you having specialist care requiring your attendance at hospital clinics for treatment?
                                  </div>
                                  <div class="col-3">
-                                    <input type="radio" name="option" id="option1" value="option1">
+                                    <input type="radio" name="specialistCare" id="option1" value="Yes">
                                     <label for="option1">Yes</label>
                                 
-                                    <input type="radio" name="option" id="option2" value="option2">
+                                    <input type="radio" name="specialistCare" id="option2" value="No">
                                     <label for="option2">No</label>
                                     <br><br>
                                 
@@ -750,10 +750,10 @@
                                    Do you have any other health problem that affects your fitness for night work?
                                  </div>
                                  <div class="col-3">
-                                    <input type="radio" name="option" id="option1" value="option1">
+                                    <input type="radio" name="nightFitness" id="option1" value="Yes">
                                     <label for="option1">Yes</label>
                                 
-                                    <input type="radio" name="option" id="option2" value="option2">
+                                    <input type="radio" name="nightFitness" id="option2" value="No">
                                     <label for="option2">No</label>
                                     <br><br>
                                 
@@ -765,10 +765,10 @@
                                    Are you taking any medication to a strict timetable?
                                  </div>
                                  <div class="col-3">
-                                    <input type="radio" name="option" id="option1" value="option1">
+                                    <input type="radio" name="strictTimetable" id="option1" value="Yes">
                                     <label for="option1">Yes</label>
                                 
-                                    <input type="radio" name="option" id="option2" value="option2">
+                                    <input type="radio" name="strictTimetable" id="option2" value="No">
                                     <label for="option2">No</label>
                                     <br><br>
                                 
@@ -847,7 +847,7 @@
 
                                         <div class="col-lg-6">
                                             <div class="form-group">
-                                                <input type="name" name="crecord" placeholder="Name*" required="">
+                                                <input type="text" class="form-control py-3 border-primary bg-transparent text-black"  name="crecord" placeholder="Name*" required="">
                                             </div>
                                         </div>
                                         
@@ -898,10 +898,10 @@
                                         I agree that I may work for more than an average of 48 hours a week. If I change my mind, I will give my employer up to
                                         3 months’ notice in writing to end this agreement. <br><br>
                                     
-                                        <input type="radio" name="option" id="option1" value="option1">
+                                        <input type="radio" name="consent" id="option1" value="Yes">
                                         <label for="option1">Yes</label>
                                     
-                                        <input type="radio" name="option" id="option2" value="option2">
+                                        <input type="radio" name="consent" id="option2" value="No">
                                         <label for="option2">No</label>
                                         <br><br>
                                     
