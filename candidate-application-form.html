@@ -1040,7 +1040,7 @@
                         <div class="footer-item d-flex flex-column">
                             <h4 class="mb-4 text-black" style="font-family:'Ubuntu', sans-serif ; font-size: 16px;">Quick Links</h4>
                             <a href="services.html"><i class="fa fa-user-md me-2"></i> Our Care Services</a>
-                            <a href="apply.html"><i class="fa fa-sticky-note me-2"></i> Apply</a>
+                            <a href="candidate-application-form.html"><i class="fa fa-sticky-note me-2"></i> Apply</a>
                             <a href="about.html"><i class="fa fa-sitemap me-2"></i> About</a>
                         </div>
                     </div>
@@ -1068,10 +1068,7 @@
                         <span class="text-black"><a href="#"><i class="fas fa-copyright text-light me-2"></i>EasyCare Supplies UK Ltd</a>, All rights reserved.</span>
                     </div>
                     <div class="col-md-6 text-center text-md-end text-black">
-                        <!--/*** This template is free as long as you keep the below author’s credit link/attribution link/backlink. ***/-->
-                        <!--/*** If you'd like to use the template without the below author’s credit link/attribution link/backlink, ***/-->
-                        <!--/*** you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". ***/-->
-                       <!-- Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a> Distributed By <a class="border-bottom" href="https://themewagon.com">ThemeWagon</a> -->
+                    
                     </div>
                 </div>
             </div>
@@ -1116,10 +1113,6 @@
 
 
                     }
-				
-					
-
-					
 				},
 				error: function(data){
 
@@ -1133,147 +1126,7 @@
               
   });
 </script> 
-     
-
-<!-- <script>
-
-
- 
-		
-	
-
-   //Get form field values
-    var name = document.getElementById('name').value;
-    var position = document.getElementById('position').value;
-    var date = document.getElementById('date').value;
-    var referenceName = document.getElementById('referenceName').value;
-    var fullTime = document.getElementById('FullTime').value;
-    var partTime = document.getElementById('PartTime').value;
-    var weekends = document.getElementById('Weekends').value;
-    var title = document.getElementById('title').value;
-    var surname = document.getElementById('Surname').value;
-    var firstName = document.getElementById('FirstName').value;
-    var phone = document.getElementById('phone').value;
-    var otherName = document.getElementById('otherName').value;
-    var homePhone = document.getElementById('homePhone').value;
-    var workphone = document.getElementById('workphone').value;
-    var email = document.getElementById('email').value;
-    var insuranceNumber = document.getElementById('insuranceNumber').value;
-    var dob = document.getElementById('dob').value;
-    var ukDriversLicenceYes = document.getElementById('UKDriversLicenceYes').value;
-    var ukDriversLicenceNo = document.getElementById('UKDriversLicenceNo').value;
-    var kinname = document.getElementById('kinname').value;
-    var kinContact = document.getElementById('kinContact').value;
-    var kinRelationship = document.getElementById('kinRelationship').value;
-    var restrictions = document.getElementById('restrictions').value;
-    var permission = document.getElementById('permission').value;
-    var regNumber = document.getElementById('regNumber').value;
-    var doexpiry = document.getElementById('doexpiry').value;
-    var dorevalidation = document.getElementById('dorevalidation').value;
-    var insurance = document.getElementById('insurance').value;
-    var policy = document.getElementById('policy').value;
-    var policyExpiry = document.getElementById('policyExpiry').value;
-    var yearStudy = document.getElementById('yearStudy').value;
-    var previousEmployer = document.getElementById('previousEmployer').value;
-    var addressEmployer = document.getElementById('addressEmployer').value;
-    var jobtitle = document.getElementById('jobtitle').value;
-    var duties = document.getElementById('duties').value;
-    var reasonsLeaving = document.getElementById('reasonsLeaving').value;
-    var refCompany = document.getElementById('refCompany').value;
-    var refDetails = document.getElementById('refDetails').value;
-    var refAddress = document.getElementById('refAddress').value;
-    var refPhone = document.getElementById('refPhone').value;
-    var refEmail = document.getElementById('refEmail').value;
-    var refDateEmployment = document.getElementById('refDateEmployment').value;
-    var disabilityYes = document.getElementById('disabilityYes').value;
-    var disabilityNo = document.getElementById('disabilityNo').value;
-    var disabilityReference = document.getElementById('disabilityReference').value;
-    var disabilityReferenceName = document.getElementById('disabilityReferenceName').value;
-    var prescribedMedications = document.getElementById('prescribedMedications').value;
-    var attentionDetail = document.getElementById('attentionDetail').value;
-    var crecord = document.getElementById('crecord').value;
-    var signature = document.getElementById('signature').value;
-    var criminalRecDate = document.getElementById('criminalRecDate').value;
-    var decName = document.getElementById('decName').value;
-    var decSignature = document.getElementById('decSignature').value;
-    var decDate = document.getElementById('decDate').value;
-    var bank = document.getElementById('bank').value;
-    var sortCode = document.getElementById('sortCode').value;
-    var accountNumber = document.getElementById('accountNumber').value;
-
-
- 
-    // Construct mailto link with form field values
-   var mailtoLink = 'mailto:info@easycareltd.co.uk' +
-  '?subject=' + encodeURIComponent('Application for ' + position +' from ' + name) +
-  '&body=' + encodeURIComponent(
-    'Name: ' + name +
-    '\nPosition: ' + position +
-    '\nDate: ' + date +
-    '\nReference Name: ' + referenceName +
-    '\nFull Time: ' + fullTime +
-    '\nPart Time: ' + partTime +
-    '\nWeekends: ' + weekends +
-    '\nTitle: ' + title +
-    '\nSurname: ' + surname +
-    '\nFirst Name: ' + firstName +
-    '\nPhone: ' + phone +
-    '\nOther Name: ' + otherName +
-    '\nHome Phone: ' + homePhone +
-    '\nWork Phone: ' + workphone +
-    '\nEmail: ' + email +
-    '\nInsurance Number: ' + insuranceNumber +
-    '\nDate of Birth: ' + dob +
-    '\nUK Driver\'s Licence - Yes: ' + ukDriversLicenceYes +
-    '\nUK Driver\'s Licence - No: ' + ukDriversLicenceNo +
-    '\nNext of Kin Name: ' + kinname +
-    '\nNext of Kin Contact: ' + kinContact +
-    '\nNext of Kin Relationship: ' + kinRelationship +
-    '\nRestrictions: ' + restrictions +
-    '\nPermission: ' + permission +
-    '\nRegistration Number: ' + regNumber +
-    '\nDriver\'s Licence Expiry: ' + doexpiry +
-    '\nDriver\'s Licence Revalidation: ' + dorevalidation +
-    '\nInsurance: ' + insurance +
-    '\nPolicy: ' + policy +
-    '\nPolicy Expiry: ' + policyExpiry +
-    '\nYear of Study: ' + yearStudy +
-    '\nPrevious Employer: ' + previousEmployer +
-    '\nAddress of Employer: ' + addressEmployer +
-    '\nJob Title: ' + jobtitle +
-    '\nDuties: ' + duties +
-    '\nReasons for Leaving: ' + reasonsLeaving +
-    '\nReference Company: ' + refCompany +
-    '\nReference Details: ' + refDetails +
-    '\nReference Address: ' + refAddress +
-    '\nReference Phone: ' + refPhone +
-    '\nReference Email: ' + refEmail +
-    '\nReference Date of Employment: ' + refDateEmployment +
-    '\nDisability - Yes: ' + disabilityYes +
-    '\nDisability - No: ' + disabilityNo +
-    '\nDisability Reference: ' + disabilityReference +
-    '\nDisability Reference Name: ' + disabilityReferenceName +
-    '\nPrescribed Medications: ' + prescribedMedications +
-    '\nAttention Detail: ' + attentionDetail +
-    '\nCriminal Record: ' + crecord +
-    '\nSignature: ' + signature +
-    '\nCriminal Record Date: ' + criminalRecDate +
-    '\nDeclaration Name: ' + decName +
-    '\nDeclaration Signature: ' + decSignature +
-    '\nDeclaration Date: ' + decDate +
-    '\nBank: ' + bank +
-    '\nSort Code: ' + sortCode +
-    '\nAccount Number: ' + accountNumber
-  );
-
-   console(mailtoLink);
-
-
-  alert (mailtoLink);
-
-    // Set the href attribute of the email link
-    document.getElementById('emailLink').setAttribute('href', mailtoLink);
-</script> -->
+   
         <!-- JavaScript Libraries -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
