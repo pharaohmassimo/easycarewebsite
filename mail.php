@@ -1,4 +1,5 @@
 <?php
+use PHPMailer\PHPMailer\PHPMailer;
 
 if (true) {
 
@@ -61,21 +62,18 @@ if (true) {
     $sortCode = $_POST['sortCode'];
     $accountNumber = $_POST['accountNumber'];
 
-
-   // Validate form fields
-    if (empty($referenceName) || empty($FullTime) || empty($PartTime) || empty($Weekends) || empty($title) || empty($Surname) || empty($FirstName) || empty($phone) || empty($otherName) || empty($homePhone) || empty($workphone) || empty($email) || empty($insuranceNumber) || empty($dob) || empty($UKDriversLicenceYes) || empty($UKDriversLicenceNo) || empty($kinname) || empty($kinContact) || empty($kinRelationship) || empty($restrictions) || empty($permission) || empty($regNumber) || empty($doexpiry) || empty($dorevalidation) || empty($insurance) || empty($policy) || empty($policyExpiry) || empty($yearStudy) || empty($previousEmployer) || empty($addressEmployer) || empty($jobtitle) || empty($duties) || empty($reasonsLeaving) || empty($refCompany) || empty($refDetails) || empty($refAddress) || empty($refPhone) || empty($refEmail) || empty($refDateEmployment) || empty($disabilityYes) || empty($disabilityNo) || empty($disabilityReference) || empty($disabilityReferenceName) || empty($prescribedMedications) || empty($attentionDetail) || empty($crecord) || empty($signature) || empty($criminalRecDate) || empty($decName) || empty($decSignature) || empty($decDate) || empty($bank) || empty($sortCode) || empty($accountNumber) || empty($date)) {
-        echo 'Please fill in all the required fields.';
-        exit;
-    }
-
-
-require_once('class.phpmailer.php');
+    
+    require 'PHPMailer/src/PHPMailer.php';
+    require 'PHPMailer/src/SMTP.php';
 
     $mail = new PHPMailer(); // defaults to using php "mail()"
-	$mail->isSMTP()
-	$mail->AddReplyTo('info@easycareltd.co.uk');
+	$mail->isSMTP();
+	$mail->Host = gethostname();
+    $mail->SMTPAuth = true;
+    $mail->Username = 'noreply@easycareltd.co.uk';
+    $mail->Password = ')ZALu0v&gruK';
 	$mail->SetFrom($email);
-	$mail->AddAddress('info@easycareltd.co.uk');
+	$mail->AddAddress('noreply@easycareltd.co.uk');
 
 
 
@@ -89,64 +87,65 @@ $mail = new PHPMailer(); // defaults to using php "mail()"
 
 
     // Email information
-    $to = 'info@easycareltd.co.uk';
-    $subject = 'Job Application';
-   $message = "Name: $Surname $FirstName\n"
-    ."Position Applied For: $position\n"
-    . "Date Completed: $date\n\n";
-    . "Reference Name: $referenceName\n"
-    . "Full Time: $FullTime\n"
-    . "Part Time: $PartTime\n"
-    . "Weekends: $Weekends\n"
-    . "Phone: $phone\n"
-    . "Other Name: $otherName\n"
-    . "Home Phone: $homePhone\n"
-    . "Work Phone: $workphone\n"
-    . "Email: $email\n"
-    . "Insurance Number: $insuranceNumber\n"
-    . "Date of Birth: $dob\n"
-    . "UK Driver's Licence (Yes/No): $UKDriversLicenceYes\n"
-    . "Kin Name: $kinname\n"
-    . "Kin Contact: $kinContact\n"
-    . "Kin Relationship: $kinRelationship\n"
-    . "Restrictions: $restrictions\n"
-    . "Permission: $permission\n"
-    . "Registration Number: $regNumber\n"
-    . "Date of Expiry: $doexpiry\n"
-    . "Date of Revalidation: $dorevalidation\n"
-    . "Insurance: $insurance\n"
-    . "Policy: $policy\n"
-    . "Policy Expiry: $policyExpiry\n"
-    . "Year of Study: $yearStudy\n"
-    . "Previous Employer: $previousEmployer\n"
-    . "Address (Employer): $addressEmployer\n"
-    . "Job Title: $jobtitle\n"
-    . "Duties: $duties\n"
-    . "Reasons for Leaving: $reasonsLeaving\n"
-    . "Reference Company: $refCompany\n"
-    . "Reference Details: $refDetails\n"
-    . "Reference Address: $refAddress\n"
-    . "Reference Phone: $refPhone\n"
-    . "Reference Email: $refEmail\n"
-    . "Reference Date of Employment: $refDateEmployment\n"
-    . "Disability (Yes/No): $disabilityYes\n"
-    . "Disability Reference: $disabilityReference\n"
-    . "Disability Reference Name: $disabilityReferenceName\n"
-    . "Prescribed Medications: $prescribedMedications\n"
-    . "Attention to Detail: $attentionDetail\n"
-    . "Criminal Record: $crecord\n"
-    . "Signature: $signature\n"
-    . "Date of Criminal Record Check: $criminalRecDate\n"
-    . "Declaration Name: $decName\n"
-    . "Declaration Signature: $decSignature\n"
-    . "Declaration Date: $decDate\n"
-    . "Bank: $bank\n"
-    . "Sort Code: $sortCode\n"
-    . "Account Number: $accountNumber\n";
-
+   
+$message = "<p><strong>Name:</strong> $Surname $FirstName</p>"
+    . "<p><strong>Position Applied For:</strong> $position</p>"
+    . "<p><strong>Date Completed:</strong> $date</p>"
+    . "<br>"
+    . "<p><strong>Reference Name:</strong> $referenceName</p>"
+    . "<p><strong>Full Time:</strong> $FullTime</p>"
+    . "<p><strong>Part Time:</strong> $PartTime</p>"
+    . "<p><strong>Weekends:</strong> $Weekends</p>"
+    . "<p><strong>Phone:</strong> $phone</p>"
+    . "<p><strong>Other Name:</strong> $otherName</p>"
+    . "<p><strong>Home Phone:</strong> $homePhone</p>"
+    . "<p><strong>Work Phone:</strong> $workphone</p>"
+    . "<p><strong>Email:</strong> $email</p>"
+    . "<p><strong>Insurance Number:</strong> $insuranceNumber</p>"
+    . "<p><strong>Date of Birth:</strong> $dob</p>"
+    . "<p><strong>UK Driver's Licence (Yes/No):</strong> $UKDriversLicenceYes</p>"
+    . "<p><strong>Kin Name:</strong> $kinname</p>"
+    . "<p><strong>Kin Contact:</strong> $kinContact</p>"
+    . "<p><strong>Kin Relationship:</strong> $kinRelationship</p>"
+    . "<p><strong>Restrictions:</strong> $restrictions</p>"
+    . "<p><strong>Permission:</strong> $permission</p>"
+    . "<p><strong>Registration Number:</strong> $regNumber</p>"
+    . "<p><strong>Date of Expiry:</strong> $doexpiry</p>"
+    . "<p><strong>Date of Revalidation:</strong> $dorevalidation</p>"
+    . "<p><strong>Insurance:</strong> $insurance</p>"
+    . "<p><strong>Policy:</strong> $policy</p>"
+    . "<p><strong>Policy Expiry:</strong> $policyExpiry</p>"
+    . "<p><strong>Year of Study:</strong> $yearStudy</p>"
+    . "<p><strong>Previous Employer:</strong> $previousEmployer</p>"
+    . "<p><strong>Address (Employer):</strong> $addressEmployer</p>"
+    . "<p><strong>Job Title:</strong> $jobtitle</p>"
+    . "<p><strong>Duties:</strong> $duties</p>"
+    . "<p><strong>Reasons for Leaving:</strong> $reasonsLeaving</p>"
+    . "<p><strong>Reference Company:</strong> $refCompany</p>"
+    . "<p><strong>Reference Details:</strong> $refDetails</p>"
+    . "<p><strong>Reference Address:</strong> $refAddress</p>"
+    . "<p><strong>Reference Phone:</strong> $refPhone</p>"
+    . "<p><strong>Reference Email:</strong> $refEmail</p>"
+    . "<p><strong>Reference Date of Employment:</strong> $refDateEmployment</p>"
+    . "<p><strong>Disability (Yes/No):</strong> $disabilityYes</p>"
+    . "<p><strong>Disability Reference:</strong> $disabilityReference</p>"
+    . "<p><strong>Disability Reference Name:</strong> $disabilityReferenceName</p>"
+    . "<p><strong>Prescribed Medications:</strong> $prescribedMedications</p>"
+    . "<p><strong>Attention to Detail:</strong> $attentionDetail</p>"
+    . "<p><strong>Criminal Record:</strong> $crecord</p>"
+    . "<p><strong>Signature:</strong> $signature</p>"
+    . "<p><strong>Date of Criminal Record Check:</strong> $criminalRecDate</p>"
+    . "<p><strong>Declaration Name:</strong> $decName</p>"
+    . "<p><strong>Declaration Signature:</strong> $decSignature</p>"
+    . "<p><strong>Declaration Date:</strong> $decDate</p>"
+    . "<p><strong>Bank:</strong> $bank</p>"
+    . "<p><strong>Sort Code:</strong> $sortCode</p>"
+    . "<p><strong>Account Number:</strong> $accountNumber</p>";
+    
+    
     $mail->Subject ="New Vacancy Application"; 
 	$mail->AltBody = $message; 
-	$mail->MsgHTML('This is a new Application from ' );
+	$mail->MsgHTML('This is a new Application from <p></p>' .$message );
     
     if(!$mail->Send()) {
 		 //if unable to create new record
