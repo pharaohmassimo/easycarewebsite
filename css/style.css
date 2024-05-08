@@ -501,6 +501,21 @@ FUN FACTS
     }
 }
 /*** Carousel Hero Header Start ***/
+
+
+/* Styles for web view */
+@media (min-width: 768px) {
+  .owl-carousel .owl-nav {
+    display: block;
+  }
+}
+
+/* Styles for mobile view */
+@media (max-width: 767px) {
+  .owl-carousel .owl-nav {
+    display: none;
+  }
+}
 .header-carousel {
     position: relative; 
 }
