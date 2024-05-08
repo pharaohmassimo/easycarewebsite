@@ -509,7 +509,7 @@
 
 
                                <br>  <header style="background-color: #52b9da; ">
-                                    <h6 style="color: white; padding: 10px; font-family: 'Ubuntu', sans-serif;">Preferences</h6>
+                                    <h6 style="color: white; padding: 10px; font-family: 'Ubuntu', sans-serif;">References</h6>
                                 </header>
                                 <br>
 
@@ -558,7 +558,7 @@
                                 <div class="col-lg-6">
                                     <div class="form-group">
                                         <label for="date">Dates of Employment:</label>
-                                        <input type="date" name="refDateEMployment" placeholder="Date of Birth*" required="">
+                                        <input type="date" name="refDateEmployment" placeholder="Date of Birth*" required="">
                                     </div>
                                 </div>
 
@@ -574,10 +574,10 @@
                                     Do you have any health issues or a disability which may make it difficult for you to carry out functions which are
                                     essential for the role you seek? <br><br>
 
-                                    <input type="radio" name="disability" id="option1" value="option1">
+                                    <input type="radio" name="disability" id="option1" value="Yes">
                                     <label for="option1">Yes</label>
 
-                                    <input type="radio" name="disability" id="option2" value="option2">
+                                    <input type="radio" name="disability" id="option2" value="No">
                                     <label for="option2">No</label>
                                     <br><br>
 
@@ -1118,7 +1118,7 @@
 
                     console.log(data);
 				
-					alert('Failed to Submit' + data);
+					alert('Failed to Submit, Please try again');
 				}
 
 			});

@@ -8,15 +8,14 @@ if (true) {
     $position = $_POST['position'];
     $date = $_POST['date'];
     $referenceName = $_POST['referenceName'];
-    $availability = $_POST['availability'];
-   
+    $availability = $_POST['availability'];   
     $title = $_POST['title'];
     $Surname = $_POST['Surname'];
     $FirstName = $_POST['FirstName'];
     $phone = $_POST['phone'];
     $otherName = $_POST['otherNameName'];
     $homePhone = $_POST['homePhone'];
-    $workphone = $_POST['workphone'];
+    $workphone = $_POST['workPhone'];
     $email = $_POST['email'];
     $insuranceNumber = $_POST['insuranceNumber'];
     $dob = $_POST['dob'];
@@ -61,15 +60,16 @@ if (true) {
 
 
     $otherName = isset($_POST['otherName']) ? $_POST['otherName'] : '';
-    $ukDriversLicense = isset($_POST['ukDriversLicense']) ? $_POST['ukDriversLicense'] : '';
+    $otherNameName = isset($_POST['otherNameName']) ? $_POST['otherNameName'] : '';
+    $ukDriversLicense = isset($_POST['UKDriversLicence']) ? $_POST['UKDriversLicence'] : '';
     $disability = isset($_POST['disability']) ? $_POST['disability'] : '';
     $nightShift = isset($_POST['nightShift']) ? $_POST['nightShift'] : '';
     $diabetic = isset($_POST['diabetic']) ? $_POST['diabetic'] : '';
     $mobility = isset($_POST['mobility']) ? $_POST['mobility'] : '';
-    $mobility = isset($_POST['specialistCare']) ? $_POST['specialistCare'] : '';      
+    $specialistCare = isset($_POST['specialistCare']) ? $_POST['specialistCare'] : '';      
     $fitnessProblem = isset($_POST['fitnessProblem']) ? $_POST['fitnessProblem'] : '';
     $stomachUlcers = isset($_POST['stomachUlcers']) ? $_POST['stomachUlcers'] : '';
-    $bowelProblems = isset($_POST['bowelProblems']) ? $_POST['bowelProblems'] : '';
+    $bowelProblem = isset($_POST['bowelProblems']) ? $_POST['bowelProblems'] : '';
     $chronicChest = isset($_POST['chronicChest']) ? $_POST['chronicChest'] : '';
     $sleepDisturbance = isset($_POST['sleepDisturbance']) ? $_POST['sleepDisturbance'] : '';
     $nightFitness = isset($_POST['nightFitness']) ? $_POST['nightFitness'] : '';
@@ -99,7 +99,8 @@ $message = "<p><strong>Name:</strong> $Surname $FirstName</p>"
     . "<p><strong>Reference Name:</strong> $referenceName</p>"
     . "<p><strong>Availability:</strong> $availability</p>"    
     . "<p><strong>Phone:</strong> $phone</p>"
-    . "<p><strong>Other Name:</strong> $otherName</p>"
+    . "<p><strong>Other Name (Yes/No):</strong> $otherName</p>"
+    . "<p><strong>Other Name:</strong> $otherNameName</p>"
     . "<p><strong>Home Phone:</strong> $homePhone</p>"
     . "<p><strong>Work Phone:</strong> $workphone</p>"
     . "<p><strong>Email:</strong> $email</p>"
@@ -130,7 +131,7 @@ $message = "<p><strong>Name:</strong> $Surname $FirstName</p>"
     . "<p><strong>Reference Phone:</strong> $refPhone</p>"
     . "<p><strong>Reference Email:</strong> $refEmail</p>"
     . "<p><strong>Reference Date of Employment:</strong> $refDateEmployment</p>"
-    . "<p><strong>Disability (Yes/No):</strong> $disabilityYes</p>"
+    . "<p><strong>Disability (Yes/No):</strong> $disability</p>"
     . "<p><strong>Disability Reference:</strong> $disabilityReference</p>"
     . "<p><strong>Disability Reference Name:</strong> $disabilityReferenceName</p>"
 
