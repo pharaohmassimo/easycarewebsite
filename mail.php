@@ -87,7 +87,7 @@ if (true) {
     $mail->Username = 'noreply@easycareltd.co.uk';
     $mail->Password = ')ZALu0v&gruK';
 	$mail->SetFrom($email);
-	$mail->AddAddress('noreply@easycareltd.co.uk');
+	$mail->AddAddress('info@easycareltd.co.uk');
 
 
     // Email information
