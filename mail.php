@@ -92,75 +92,144 @@ if (true) {
 
 
     // Email information
-   
-$message = "<p><strong>Name:</strong> $Surname $FirstName</p>"
-    . "<p><strong>Position Applied For:</strong> $position</p>"
-    . "<p><strong>Date Completed:</strong> $date</p>"
-    . "<br>"
-    . "<p><strong>Reference Name:</strong> $referenceName</p>"
-    . "<p><strong>Availability:</strong> $availability</p>"    
-    . "<p><strong>Phone:</strong> $phone</p>"
-    . "<p><strong>Other Name (Yes/No):</strong> $otherName</p>"
-    . "<p><strong>Other Name:</strong> $otherNameName</p>"
-    . "<p><strong>Home Phone:</strong> $homePhone</p>"
-    "<p><strong>Current Address:</strong> $address</p>"
-    . "<p><strong>Work Phone:</strong> $workphone</p>"
-    . "<p><strong>Email:</strong> $email</p>"
-    . "<p><strong>Insurance Number:</strong> $insuranceNumber</p>"
-    . "<p><strong>Date of Birth:</strong> $dob</p>"    
-    . "<p><strong>UK Driver's Licence :</strong> $ukDriversLicense</p>"
-    ."<br>"
-    . "<p><strong>Kin Name:</strong> $kinname</p>"
-    . "<p><strong>Kin Contact:</strong> $kinContact</p>"
-    . "<p><strong>Kin Relationship:</strong> $kinRelationship</p>"
-    . "<p><strong>Restrictions:</strong> $restrictions</p>"
-    . "<p><strong>Permission:</strong> $permission</p>"
-    . "<p><strong>Registration Number:</strong> $regNumber</p>"
-    . "<p><strong>Date of Expiry:</strong> $doexpiry</p>"
-    . "<p><strong>Date of Revalidation:</strong> $dorevalidation</p>"
-    . "<p><strong>Insurance:</strong> $insurance</p>"
-    . "<p><strong>Policy:</strong> $policy</p>"
-    . "<p><strong>Policy Expiry:</strong> $policyExpiry</p>"
-    . "<p><strong>Year of Study:</strong> $yearStudy</p>"
-    . "<p><strong>Previous Employer:</strong> $previousEmployer</p>"
-    . "<p><strong>Address (Employer):</strong> $addressEmployer</p>"
-    . "<p><strong>Job Title:</strong> $jobtitle</p>"
-    . "<p><strong>Duties:</strong> $duties</p>"
-    . "<p><strong>Reasons for Leaving:</strong> $reasonsLeaving</p>"
-    . "<p><strong>Reference Company:</strong> $refCompany</p>"
-    . "<p><strong>Reference Details:</strong> $refDetails</p>"
-    . "<p><strong>Reference Address:</strong> $refAddress</p>"
-    . "<p><strong>Reference Phone:</strong> $refPhone</p>"
-    . "<p><strong>Reference Email:</strong> $refEmail</p>"
-    . "<p><strong>Reference Date of Employment:</strong> $refDateEmployment</p>"
-    . "<p><strong>Disability (Yes/No):</strong> $disability</p>"
-    . "<p><strong>Disability Reference:</strong> $disabilityReference</p>"
-    . "<p><strong>Disability Reference Name:</strong> $disabilityReferenceName</p>"
+$message = '
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #000000;
+        }
+        .section {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #e0e0e0;
+            border-radius: 5px;
+            background-color: #f2f2f2;
+        }
+        p {
+            margin: 5px 0;
+        }
+        strong {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Application Form Details</h2>
+        
+        <div class="section">
+            <h3>Personal Information</h3>
+            <p><strong>Name:</strong> ' . htmlspecialchars("$Surname $FirstName") . '</p>
+            <p><strong>Position Applied For:</strong> ' . htmlspecialchars($position) . '</p>
+            <p><strong>Date Completed:</strong> ' . htmlspecialchars($date) . '</p>
+            <p><strong>Reference Name:</strong> ' . htmlspecialchars($referenceName) . '</p>
+            <p><strong>Availability:</strong> ' . htmlspecialchars($availability) . '</p>
+            <p><strong>Phone:</strong> ' . htmlspecialchars($phone) . '</p>
+            <p><strong>Other Name (Yes/No):</strong> ' . htmlspecialchars($otherName) . '</p>
+            <p><strong>Other Name:</strong> ' . htmlspecialchars($otherNameName) . '</p>
+            <p><strong>Home Phone:</strong> ' . htmlspecialchars($homePhone) . '</p>
+            <p><strong>Current Address:</strong> ' . htmlspecialchars($address) . '</p>
+            <p><strong>Work Phone:</strong> ' . htmlspecialchars($workphone) . '</p>
+            <p><strong>Email:</strong> ' . htmlspecialchars($email) . '</p>
+            <p><strong>Insurance Number:</strong> ' . htmlspecialchars($insuranceNumber) . '</p>
+            <p><strong>Date of Birth:</strong> ' . htmlspecialchars($dob) . '</p>
+            <p><strong>UK Driver\'s Licence:</strong> ' . htmlspecialchars($ukDriversLicense) . '</p>
+        </div>
 
-    ."<br>"
-    . "<p><strong>Problem in past that has prevented you from working at night:</strong> $nightShift</p>"
-    . "<p><strong>Diabetic:</strong> $diabetic</p>"
-    . "<p><strong>Heart problems affecting fitness:</strong> $fitnessProblem</p>"
-    . "<p><strong>Duodenal or stomach ulcers in the past:</strong> $stomachUlcers</p>"
-    . "<p><strong>Continuing bowel problem, for instance following major surgery:</strong> $bowelProblems</p>"
-    . "<p><strong>Chronic chest problem such as asthma, emphysema or bronchiectasis:</strong> $chronicChest</p>"
-    . "<p><strong>Disability affecting mobility that will cause difficulties in arranging night work:</strong> $mobility</p>"
-    . "<p><strong>Recurrent or continuing sleep disturbance requiring medical advice:</strong> $sleepDisturbance</p>"
-    . "<p><strong>Taking any medication to a strict timetable:</strong> $strictTimetable</p>"
-    . "<p><strong>Other health problem that affects your fitness for night work:</strong> $nightFitness</p>"
-    . "<p><strong>Having specialist care requiring your attendance at hospital clinics for treatment:</strong> $specialistCare</p>"
+        <div class="section">
+            <h3>Next of Kin</h3>
+            <p><strong>Kin Name:</strong> ' . htmlspecialchars($kinname) . '</p>
+            <p><strong>Kin Contact:</strong> ' . htmlspecialchars($kinContact) . '</p>
+            <p><strong>Kin Relationship:</strong> ' . htmlspecialchars($kinRelationship) . '</p>
+            <p><strong>Restrictions:</strong> ' . htmlspecialchars($restrictions) . '</p>
+            <p><strong>Permission:</strong> ' . htmlspecialchars($permission) . '</p>
+        </div>
 
-    . "<p><strong>Prescribed Medications:</strong> $prescribedMedications</p>"
-    . "<p><strong>Attention to Detail:</strong> $attentionDetail</p>"
-    . "<p><strong>Criminal Record:</strong> $crecord</p>"
-    . "<p><strong>Signature:</strong> $signature</p>"
-    . "<p><strong>Date of Criminal Record Check:</strong> $criminalRecDate</p>"
-    . "<p><strong>Declaration Name:</strong> $decName</p>"
-    . "<p><strong>Declaration Signature:</strong> $decSignature</p>"
-    . "<p><strong>Declaration Date:</strong> $decDate</p>"
-    . "<p><strong>Bank:</strong> $bank</p>"
-    . "<p><strong>Sort Code:</strong> $sortCode</p>"
-    . "<p><strong>Account Number:</strong> $accountNumber</p>";
+        <div class="section">
+            <h3>Registration Details</h3>
+            <p><strong>Registration Number:</strong> ' . htmlspecialchars($regNumber) . '</p>
+            <p><strong>Date of Expiry:</strong> ' . htmlspecialchars($doexpiry) . '</p>
+            <p><strong>Date of Revalidation:</strong> ' . htmlspecialchars($dorevalidation) . '</p>
+            <p><strong>Insurance:</strong> ' . htmlspecialchars($insurance) . '</p>
+            <p><strong>Policy:</strong> ' . htmlspecialchars($policy) . '</p>
+            <p><strong>Policy Expiry:</strong> ' . htmlspecialchars($policyExpiry) . '</p>
+            <p><strong>Year of Study:</strong> ' . htmlspecialchars($yearStudy) . '</p>
+        </div>
+
+        <div class="section">
+            <h3>Employment History</h3>
+            <p><strong>Previous Employer:</strong> ' . htmlspecialchars($previousEmployer) . '</p>
+            <p><strong>Address (Employer):</strong> ' . htmlspecialchars($addressEmployer) . '</p>
+            <p><strong>Job Title:</strong> ' . htmlspecialchars($jobtitle) . '</p>
+            <p><strong>Duties:</strong> ' . htmlspecialchars($duties) . '</p>
+            <p><strong>Reasons for Leaving:</strong> ' . htmlspecialchars($reasonsLeaving) . '</p>
+        </div>
+
+        <div class="section">
+            <h3>References</h3>
+            <p><strong>Reference Company:</strong> ' . htmlspecialchars($refCompany) . '</p>
+            <p><strong>Reference Details:</strong> ' . htmlspecialchars($refDetails) . '</p>
+            <p><strong>Reference Address:</strong> ' . htmlspecialchars($refAddress) . '</p>
+            <p><strong>Reference Phone:</strong> ' . htmlspecialchars($refPhone) . '</p>
+            <p><strong>Reference Email:</strong> ' . htmlspecialchars($refEmail) . '</p>
+            <p><strong>Reference Date of Employment:</strong> ' . htmlspecialchars($refDateEmployment) . '</p>
+        </div>
+
+        <div class="section">
+            <h3>Health Information</h3>
+            <p><strong>Disability (Yes/No):</strong> ' . htmlspecialchars($disability) . '</p>
+            <p><strong>Disability Reference:</strong> ' . htmlspecialchars($disabilityReference) . '</p>
+            <p><strong>Disability Reference Name:</strong> ' . htmlspecialchars($disabilityReferenceName) . '</p>
+            <p><strong>Problem in past that has prevented you from working at night:</strong> ' . htmlspecialchars($nightShift) . '</p>
+            <p><strong>Diabetic:</strong> ' . htmlspecialchars($diabetic) . '</p>
+            <p><strong>Heart problems affecting fitness:</strong> ' . htmlspecialchars($fitnessProblem) . '</p>
+            <p><strong>Duodenal or stomach ulcers in the past:</strong> ' . htmlspecialchars($stomachUlcers) . '</p>
+            <p><strong>Continuing bowel problem:</strong> ' . htmlspecialchars($bowelProblems) . '</p>
+            <p><strong>Chronic chest problem:</strong> ' . htmlspecialchars($chronicChest) . '</p>
+            <p><strong>Disability affecting mobility:</strong> ' . htmlspecialchars($mobility) . '</p>
+            <p><strong>Recurrent or continuing sleep disturbance:</strong> ' . htmlspecialchars($sleepDisturbance) . '</p>
+            <p><strong>Taking any medication to a strict timetable:</strong> ' . htmlspecialchars($strictTimetable) . '</p>
+            <p><strong>Other health problem affecting fitness for night work:</strong> ' . htmlspecialchars($nightFitness) . '</p>
+            <p><strong>Specialist care requiring attendance at hospital clinics:</strong> ' . htmlspecialchars($specialistCare) . '</p>
+        </div>
+
+        <div class="section">
+            <h3>Additional Information</h3>
+            <p><strong>Prescribed Medications:</strong> ' . htmlspecialchars($prescribedMedications) . '</p>
+            <p><strong>Attention to Detail:</strong> ' . htmlspecialchars($attentionDetail) . '</p>
+            <p><strong>Criminal Record:</strong> ' . htmlspecialchars($crecord) . '</p>
+            <p><strong>Signature:</strong> ' . htmlspecialchars($signature) . '</p>
+            <p><strong>Date of Criminal Record Check:</strong> ' . htmlspecialchars($criminalRecDate) . '</p>
+            <p><strong>Declaration Name:</strong> ' . htmlspecialchars($decName) . '</p>
+            <p><strong>Declaration Signature:</strong> ' . htmlspecialchars($decSignature) . '</p>
+            <p><strong>Declaration Date:</strong> ' . htmlspecialchars($decDate) . '</p>
+            <p><strong>Bank:</strong> ' . htmlspecialchars($bank) . '</p>
+            <p><strong>Sort Code:</strong> ' . htmlspecialchars($sortCode) . '</p>
+            <p><strong>Account Number:</strong> ' . htmlspecialchars($accountNumber) . '</p>
+        </div>
+    </div>
+</body>
+</html>';
     
     
     $mail->Subject ="New Vacancy Application"; 
