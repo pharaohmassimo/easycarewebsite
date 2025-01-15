@@ -13,6 +13,7 @@ if (true) {
     $Surname = isset($_POST['Surname']) ? $_POST['Surname'] : '';
     $FirstName = isset($_POST['FirstName']) ? $_POST['FirstName'] : '';
     $phone = isset($_POST['phone']) ? $_POST['phone'] : '';
+    $address = isset($_POST['address']) ? $_POST['address'] : '';
     $otherName = isset($_POST['otherNameName']) ? $_POST['otherNameName'] : '';
     $homePhone = isset($_POST['homePhone']) ? $_POST['homePhone'] : '';
     $workphone = isset($_POST['workPhone']) ? $_POST['workPhone'] : '';
@@ -102,6 +103,7 @@ $message = "<p><strong>Name:</strong> $Surname $FirstName</p>"
     . "<p><strong>Other Name (Yes/No):</strong> $otherName</p>"
     . "<p><strong>Other Name:</strong> $otherNameName</p>"
     . "<p><strong>Home Phone:</strong> $homePhone</p>"
+    "<p><strong>Current Address:</strong> $address</p>"
     . "<p><strong>Work Phone:</strong> $workphone</p>"
     . "<p><strong>Email:</strong> $email</p>"
     . "<p><strong>Insurance Number:</strong> $insuranceNumber</p>"
