@@ -14,6 +14,7 @@ if (true) {
     $FirstName = isset($_POST['FirstName']) ? $_POST['FirstName'] : '';
     $phone = isset($_POST['phone']) ? $_POST['phone'] : '';
     $address = isset($_POST['address']) ? $_POST['address'] : '';
+        $postcode = isset($_POST['postcode']) ? $_POST['postcode'] : '';
     $otherName = isset($_POST['otherNameName']) ? $_POST['otherNameName'] : '';
     $homePhone = isset($_POST['homePhone']) ? $_POST['homePhone'] : '';
     $workphone = isset($_POST['workPhone']) ? $_POST['workPhone'] : '';
@@ -149,6 +150,7 @@ $message = '
             <p><strong>Other Name:</strong> ' . htmlspecialchars($otherNameName) . '</p>
             <p><strong>Home Phone:</strong> ' . htmlspecialchars($homePhone) . '</p>
             <p><strong>Current Address:</strong> ' . htmlspecialchars($address) . '</p>
+             <p><strong>Postcode:</strong> ' . htmlspecialchars($postcode) . '</p>
             <p><strong>Work Phone:</strong> ' . htmlspecialchars($workphone) . '</p>
             <p><strong>Email:</strong> ' . htmlspecialchars($email) . '</p>
             <p><strong>Insurance Number:</strong> ' . htmlspecialchars($insuranceNumber) . '</p>
