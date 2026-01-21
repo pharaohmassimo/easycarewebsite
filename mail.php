@@ -1,8 +1,23 @@
 <?php
-use PHPMailer\PHPMailer\PHPMailer;
+// Enable error reporting for debugging
+error_reporting(E_ALL);
+ini_set('display_errors', 0);
+ini_set('log_errors', 1);
+ini_set('error_log', __DIR__ . '/php-error.log');
 
-if (true) {
+// Set header to return JSON
+header('Content-Type: application/json');
 
+// Only process POST requests
+if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+    echo json_encode(array(
+        'status' => 'Error',
+        'message' => 'Invalid request method'
+    ));
+    exit;
+}
+
+try {
     // Get the form fields
     $name = isset($_POST['name']) ? $_POST['name'] : '';
     $position = isset($_POST['position']) ? $_POST['position'] : '';
@@ -71,25 +86,21 @@ if (true) {
     $specialistCare = isset($_POST['specialistCare']) ? $_POST['specialistCare'] : '';      
     $fitnessProblem = isset($_POST['fitnessProblem']) ? $_POST['fitnessProblem'] : '';
     $stomachUlcers = isset($_POST['stomachUlcers']) ? $_POST['stomachUlcers'] : '';
-    $bowelProblem = isset($_POST['bowelProblems']) ? $_POST['bowelProblems'] : '';
+    $bowelProblem = isset($_POST['bowelProblem']) ? $_POST['bowelProblem'] : '';
+    $bowelProblems = isset($_POST['bowelProblems']) ? $_POST['bowelProblems'] : '';
     $chronicChest = isset($_POST['chronicChest']) ? $_POST['chronicChest'] : '';
     $sleepDisturbance = isset($_POST['sleepDisturbance']) ? $_POST['sleepDisturbance'] : '';
     $nightFitness = isset($_POST['nightFitness']) ? $_POST['nightFitness'] : '';
     $strictTimetable = isset($_POST['strictTimetable']) ? $_POST['strictTimetable'] : '';
     $consent = isset($_POST['consent']) ? $_POST['consent'] : '';
 
-    
-    require 'PHPMailer/src/PHPMailer.php';
-    require 'PHPMailer/src/SMTP.php';
-
-    $mail = new PHPMailer(); // defaults to using php "mail()"
-	$mail->isSMTP();
-	$mail->Host = gethostname();
-    $mail->SMTPAuth = true;
-    $mail->Username = 'noreply@easycareltd.co.uk';
-    $mail->Password = ')ZALu0v&gruK';
-	$mail->SetFrom($email);
-	$mail->AddAddress('bookings1@easycareltd.co.uk');
+    // Prepare email addresses
+    $to = 'bookings1@easycareltd.co.uk';
+    $from = $email ? $email : 'noreply@easycareltd.co.uk';
+    $fromName = trim($FirstName . ' ' . $Surname);
+    if (empty($fromName)) {
+        $fromName = 'Job Applicant';
+    }
 
 
     // Email information
@@ -206,7 +217,7 @@ $message = '
             <p><strong>Diabetic:</strong> ' . htmlspecialchars($diabetic) . '</p>
             <p><strong>Heart problems affecting fitness:</strong> ' . htmlspecialchars($fitnessProblem) . '</p>
             <p><strong>Duodenal or stomach ulcers in the past:</strong> ' . htmlspecialchars($stomachUlcers) . '</p>
-            <p><strong>Continuing bowel problem:</strong> ' . htmlspecialchars($bowelProblems) . '</p>
+            <p><strong>Continuing bowel problem:</strong> ' . htmlspecialchars($bowelProblem) . '</p>
             <p><strong>Chronic chest problem:</strong> ' . htmlspecialchars($chronicChest) . '</p>
             <p><strong>Disability affecting mobility:</strong> ' . htmlspecialchars($mobility) . '</p>
             <p><strong>Recurrent or continuing sleep disturbance:</strong> ' . htmlspecialchars($sleepDisturbance) . '</p>
@@ -233,23 +244,42 @@ $message = '
 </body>
 </html>';
     
+    // Email subject
+    $subject = "New Vacancy Application - " . $position;
     
-    $mail->Subject ="New Vacancy Application"; 
-	$mail->AltBody = $message; 
-	$mail->MsgHTML('This is a new Application from <p></p>' .$message );
+    // Email headers
+    $headers = "MIME-Version: 1.0" . "\r\n";
+    $headers .= "Content-type: text/html; charset=UTF-8" . "\r\n";
+    $headers .= "From: " . $fromName . " <" . $from . ">" . "\r\n";
+    $headers .= "Reply-To: " . $from . "\r\n";
+    $headers .= "X-Mailer: PHP/" . phpversion();
     
-    if(!$mail->Send()) {
-		 //if unable to create new record
-	    echo json_encode(array(
-	    	'status' => 'Error',
-	    	//'message'=> 'There has been an error, please try again.'
-	    	'message' => 'There has been an error, please try again.<pre>'.$mail->ErrorInfo.'</pre>'
-	    ));
-	} else {
-	   echo json_encode(array(
-			'status' => 'Success',
-			'message'=> 'Application has been successfully'
-		));
-	}
+    // Send the email using PHP mail() function
+    $mailSent = mail($to, $subject, $message, $headers);
+    
+    if(!$mailSent) {
+        // If unable to send email
+        $errorMsg = error_get_last();
+        echo json_encode(array(
+            'status' => 'Error',
+            'message' => 'There has been an error sending your application. Please try again. ' . ($errorMsg ? $errorMsg['message'] : 'Mail function failed.')
+        ));
+        exit;
+    } else {
+        // Email sent successfully
+        echo json_encode(array(
+            'status' => 'Success',
+            'message' => 'Application has been submitted successfully'
+        ));
+        exit;
+    }
+    
+} catch (Exception $e) {
+    // Catch any exceptions and return error
+    echo json_encode(array(
+        'status' => 'Error',
+        'message' => 'Error processing your application: ' . $e->getMessage()
+    ));
+    exit;
 }
 ?>
